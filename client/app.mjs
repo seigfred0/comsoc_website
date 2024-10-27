@@ -16,7 +16,7 @@ const app = Vue.createApp({
 });
 
 const router = VueRouter.createRouter({
-    history: VueRouter.createWebHistory(),
+    history: VueRouter.createWebHistory(), 
     routes: [
         { path: '/', component: Home },
         { path: '/registration', component: Registration },
@@ -25,6 +25,7 @@ const router = VueRouter.createRouter({
 })
 
 app.component('Button', PrimeVue.Button);
+app.component('Drawer', PrimeVue.Drawer);
 
 
 app.use(router);

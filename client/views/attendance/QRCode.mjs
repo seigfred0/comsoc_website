@@ -13,10 +13,11 @@ export const QRCode = {
                 </div>
 
                 <div class="qr-container">
-
+                    <!-- 
                     
-                    <qrcode-stream v-show="scanStatus" @detect="onDetect"></qrcode-stream>
-                    
+                        <qrcode-stream v-show="scanStatus" @detect="onDetect"></qrcode-stream>
+                    -->
+                    <div class="qr-counter">{{ attendanceCounter }}</div>
                 </div>
                 <div class="qr-page_buttons">           
                     <Button 
@@ -27,40 +28,115 @@ export const QRCode = {
                     />
                     <Button label="Scan" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
                 </div>
+            </div>
+
+        
+            <Button label="open modal" @click="openModal" />
+
+            <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" >
+                <div class="drawer_list-scannedData">
+                    <ul class="test">
+                        <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
+                            <div class="list-top">
+                                <p>{{ item.name }}</p>
+                                <p>{{ item.session }}</p>
+                            </div>
+                            <div class="list-bottom">
+                                <p>{{ item.year }}</p>
+                                <p>{{ item.time }}</p>
+                            </div>
+                        </li>
+
+                        <li class="scan-list">
+                            <div class="list-top">
+                                <p>Seigfred Sayson</p>
+                                <p>Session In</p>
+                            </div>
+                            <div class="list-bottom">
+                                <p>2nd Year</p>
+                                <p>9:30am</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <p>{{result}}</p>
+                <div class="drawer-btns">
+                    <Button label="Scan Again" icon="pi pi-qrcode" @click="" class="secondary-btn"/>
+                    <Button label="Mark Attendance" icon="pi pi-check-circle" @click="" class="cta-btn"/>
+                </div>
+            </Drawer>
             
         </div> 
     `,
     data() {
         return{
-            result: 'QR Code Result',
+            attendanceCounter: 0,
+            result: 'data is',
             session: true,
             scanStatus: false,
-            scannedData: []
+            scannedData: [],
+
+            // Components
+            visibleBottom: false
         }
     },
     methods: {
+        openModal() {
+            this.visibleBottom = !this.visibleBottom
+        },
         toggleSession() {
             this.session = !this.session
             console.log(this.session)
 
         },
         scanQRCode() {
-            console.log('session Type',this.session)
-            this.scanStatus = !this.scanStatus
+            // console.log('session Type',this.session)
+            // this.scanStatus = !this.scanStatus
+
+            // const date = new Date().toISOString().slice(0, 10);
+            // const time = new Date().toTimeString().slice(0, 10);
+            // const time = new Date().toLocaleTimeString('en-US', {
+            //     hour: 'numeric',
+            //     minute: 'numeric',
+            //     second: 'numeric',
+            //     hour12: true
+            // });
+            
+            // console.log(date)
+            // console.log(time)
+            const newData = {
+                name: 'seigfredaaaa'
+            }
+
+            this.scannedData.push(newData);
+            
+            this.attendanceCounter = this.scannedData.length
+            console.log(this.scannedData)
         },
         onDetect(data) {
             const rawValue = data[0].rawValue;
             const [uid, name, year] = rawValue.split("&");
 
-            this.scannedData = {
+            const date = new Date().toISOString().slice(0, 10);
+            const time = new Date().toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+
+            const newData = {
                 uid: uid.trim(),
                 name: name.trim(),
                 year: year.trim(),
+                session: this.session ? "in" : "out",
+                time: time,
+                date: date
             }
+
+            this.scannedData.push(newData)
             
-            this.result = `${uid}, name is: ${name}, year is ${year}`;
+            
+            this.result = uid + name + year;
         }
 
     },
@@ -77,4 +153,4 @@ export const QRCode = {
 //     "format": "qr_code", 
 //     "cornerPoints": [ { "x": 77, "y": 215 }, { "x": 295, "y": 223 }, { "x": 286, "y": 436 }, { "x": 76, "y": 429 } ] 
 //     } 
-// ]
+// ] http://127.0.0.1:4040 
