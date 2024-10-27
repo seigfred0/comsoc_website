@@ -1,0 +1,124 @@
+
+:root {
+    
+    --font-heading: 'Lexend';
+    --font-body: 'Overpass Mono';
+
+    --black: #111111;
+    --white: #F2F4F7;
+    --orange: #FF6500;
+    --blue: #105681;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.font-heading {
+    font-size: 2.25rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.font-sub_heading {
+    font-family: var(--font-body);
+
+}
+
+
+
+.p-button{
+    border: none;
+    font-family: var(--font-heading);
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.cta-btn {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.close-btn_qrpage {
+    width: 2rem;
+    height: 30px;
+    position: absolute;
+    background-color: transparent; 
+    color: black;
+    left: 0;
+    top: -35px;
+}
+
+
+.pi-times {
+    font-size: 1.35rem;
+}
+
+
+/* QR Code Page */
+
+.qr-page {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    padding: 1em;
+}
+
+.qr-page_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
+    position: relative;
+    margin-top: 3.5em;
+}
+
+
+.qr-container {
+
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* padding: 1em; */
+}
+
+.qr-page_buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85em;
+    margin-top: 2.5em;
+}
+
+
+
+
+.secondary-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-in {
+    background-color: #A6E7D8;
+    color: #008767; 
+    border-color: #008767;
+}
+
+.btn-out {
+    background-color: #ffd2b5;
+    color: #ff6600; 
+    border-color: #FF6500;
+}
