@@ -30,16 +30,13 @@ export const QRCode = {
                 </div>
             </div>
 
-        
-            <Button label="open modal" @click="openModal" />
-
             <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" >
                 <div class="drawer_list-scannedData">
                     <ul class="test">
                         <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
                             <div class="list-top">
                                 <p>{{ item.name }}</p>
-                                <p>{{ item.session }}</p>
+                                <p>Session {{ item.session }}</p>
                             </div>
                             <div class="list-bottom">
                                 <p>{{ item.year }}</p>
@@ -80,37 +77,24 @@ export const QRCode = {
         }
     },
     methods: {
-        openModal() {
-            this.visibleBottom = !this.visibleBottom
-        },
         toggleSession() {
             this.session = !this.session
             console.log(this.session)
 
         },
         scanQRCode() {
-            // console.log('session Type',this.session)
-            // this.scanStatus = !this.scanStatus
-
-            // const date = new Date().toISOString().slice(0, 10);
-            // const time = new Date().toTimeString().slice(0, 10);
-            // const time = new Date().toLocaleTimeString('en-US', {
-            //     hour: 'numeric',
-            //     minute: 'numeric',
-            //     second: 'numeric',
-            //     hour12: true
-            // });
-            
-            // console.log(date)
-            // console.log(time)
             const newData = {
-                name: 'seigfredaaaa'
+                name: 'seigfredaaaa',
+                session: this.session ? "in" : "out"
             }
 
             this.scannedData.push(newData);
             
             this.attendanceCounter = this.scannedData.length
             console.log(this.scannedData)
+
+            this.visibleBottom = !this.visibleBottom
+
         },
         onDetect(data) {
             const rawValue = data[0].rawValue;
@@ -154,3 +138,4 @@ export const QRCode = {
 //     "cornerPoints": [ { "x": 77, "y": 215 }, { "x": 295, "y": 223 }, { "x": 286, "y": 436 }, { "x": 76, "y": 429 } ] 
 //     } 
 // ] http://127.0.0.1:4040 
+
