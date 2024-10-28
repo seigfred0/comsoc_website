@@ -12,24 +12,24 @@ export const QRCode = {
                     <p class="font-sub_heading">Scan and mark their attendance</p>
                 </div>
 
+
                 <div class="qr-container">
-                    <!-- 
-                    
-                        <qrcode-stream v-show="scanStatus" @detect="onDetect"></qrcode-stream>
-                    -->
+                    <qrcode-stream  @detect="onDetect">
+                      
+                    </qrcode-stream>
                     <div class="qr-counter">{{ attendanceCounter }}</div>
                 </div>
                 <div class="qr-page_buttons">           
+                    <p class="qr-page-error" v-show="error">{{ error }}</p>
                     <Button 
                         :label="session ? 'In' : 'Out'" 
                         :class="['secondary-btn', session ? 'btn-in' : 'btn-out']"
                         icon="pi pi-clock"  
                         @click="toggleSession"
                     />
-                    <Button label="Scan" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
+                    <Button label="View" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
                 </div>
             </div>
-
             <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" >
                 <div class="drawer_list-scannedData">
                     <ul class="test">
@@ -43,7 +43,8 @@ export const QRCode = {
                                 <p>{{ item.time }}</p>
                             </div>
                         </li>
-
+                        <!-- 
+                        
                         <li class="scan-list">
                             <div class="list-top">
                                 <p>Seigfred Sayson</p>
@@ -54,6 +55,10 @@ export const QRCode = {
                                 <p>9:30am</p>
                             </div>
                         </li>
+                        
+                        
+                        -->
+
                     </ul>
                 </div>
                 <div class="drawer-btns">
@@ -69,8 +74,10 @@ export const QRCode = {
             attendanceCounter: 0,
             result: 'data is',
             session: true,
-            scanStatus: false,
+            scanStatus: true,
             scannedData: [],
+            error: undefined,
+            allData: [],
 
             // Components
             visibleBottom: false
@@ -83,44 +90,35 @@ export const QRCode = {
 
         },
         scanQRCode() {
-            const newData = {
-                name: 'seigfredaaaa',
-                session: this.session ? "in" : "out"
-            }
-
-            this.scannedData.push(newData);
-            
-            this.attendanceCounter = this.scannedData.length
-            console.log(this.scannedData)
-
-            this.visibleBottom = !this.visibleBottom
-
+            this.visibleBottom = !this.visibleBottom;
+        },
+        parseData(data) {
+         
         },
         onDetect(data) {
-            const rawValue = data[0].rawValue;
-            const [uid, name, year] = rawValue.split("&");
+            if (data && data.length > 0) {
+                const rawValue = data[0].rawValue;
+                const values = rawValue.split("&");
 
-            const date = new Date().toISOString().slice(0, 10);
-            const time = new Date().toLocaleTimeString('en-US', {
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric',
-                hour12: true
-            });
+                if (values.length >= 3) {
+                    this.error = false;
+                    const [uid, name, year] = values;
 
-            const newData = {
-                uid: uid.trim(),
-                name: name.trim(),
-                year: year.trim(),
-                session: this.session ? "in" : "out",
-                time: time,
-                date: date
+                    const newData = {
+                        uid: uid.trim(),
+                        name: name.trim(),
+                        year: year.trim(),
+                    };
+                    console.log('new', newData)
+                    this.scannedData.push(newData); 
+                    this.attendanceCounter = this.scannedData.length;
+                } else {
+                    this.error = true;
+                    this.error = 'Invalid QR Code, Try again'
+                }
+                this.allData.push(values)
+                console.log(this.allData)
             }
-
-            this.scannedData.push(newData)
-            
-            
-            this.result = uid + name + year;
         }
 
     },
@@ -129,13 +127,4 @@ export const QRCode = {
     }
 }
 
-
-// [ 
-//     { 
-//     "boundingBox": { "x": 76, "y": 215, "width": 219, "height": 221, "top": 215, "right":   295, "bottom": 436, "left": 76 }, 
-//     "rawValue": "7f02c2c7-d90a-46e9-8b89-3a1387806931&daven&1Y", 
-//     "format": "qr_code", 
-//     "cornerPoints": [ { "x": 77, "y": 215 }, { "x": 295, "y": 223 }, { "x": 286, "y": 436 }, { "x": 76, "y": 429 } ] 
-//     } 
-// ] http://127.0.0.1:4040 
 
