@@ -1,12 +1,13 @@
+import qrCodeApi from '../../api/qrCodeApi.mjs'
 
-
+// https://docs.google.com/spreadsheets/d/17L_wPeeG2LRJjVMhtQzRjPqDBpRZ3SkoK4nXHIk9Jew/edit?gid=802696440#gid=802696440
 export const QRCode = {
     /* html */
     template: 
     `
         <div class="qr-page">
             <div class="qr-page_container container">
-                <Button icon="pi pi-times" class="close-btn_qrpage"/>
+                <Button icon="pi pi-times" @click="goHome" class="close-btn_qrpage"/>
                 <div>     
                     <h1 class="font-heading">Student QR Code</h1>
                     <p class="font-sub_heading">Scan and mark their attendance</p>
@@ -30,7 +31,7 @@ export const QRCode = {
                     <Button label="View" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
                 </div>
             </div>
-            <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" >
+            <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" :show-close-icon="false">
                 <div class="drawer_list-scannedData">
                     <ul class="test">
                         <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
@@ -62,8 +63,8 @@ export const QRCode = {
                     </ul>
                 </div>
                 <div class="drawer-btns">
-                    <Button label="Scan Again" icon="pi pi-qrcode" @click="" class="secondary-btn"/>
-                    <Button label="Mark Attendance" icon="pi pi-check-circle" @click="" class="cta-btn"/>
+                    <Button label="Scan Again" icon="pi pi-qrcode" @click="closeDrawer" class="secondary-btn"/>
+                    <Button label="Mark Attendance" icon="pi pi-check-circle" @click="sendAttendance" class="cta-btn"/>
                 </div>
             </Drawer>
             
@@ -73,7 +74,7 @@ export const QRCode = {
         return{
             attendanceCounter: 0,
             result: 'data is',
-            session: true,
+            session: ['morning IN', 'morning OUT', 'afternoon In', 'afternoon OUT'],
             scanStatus: true,
             scannedData: [],
             error: undefined,
@@ -84,6 +85,17 @@ export const QRCode = {
         }
     },
     methods: {
+        goHome() {
+            this.$router.push("/")
+        },
+        closeDrawer() {
+            this.visibleBottom = false
+        },
+        async sendAttendance() {
+            const result = await qrCodeApi.sendAttendance(this.scannedData)
+            this.scannedData = []
+
+        },
         toggleSession() {
             this.session = !this.session
             console.log(this.session)
@@ -92,9 +104,6 @@ export const QRCode = {
         scanQRCode() {
             this.visibleBottom = !this.visibleBottom;
         },
-        parseData(data) {
-         
-        },
         onDetect(data) {
             if (data && data.length > 0) {
                 const rawValue = data[0].rawValue;
@@ -102,12 +111,16 @@ export const QRCode = {
 
                 if (values.length >= 3) {
                     this.error = false;
-                    const [uid, name, year] = values;
+                    const [studentId, name, year] = values;
+                    const currentDate = new Date()
 
                     const newData = {
-                        uid: uid.trim(),
+                        studentId: studentId.trim(),
                         name: name.trim(),
                         year: year.trim(),
+                        session: this.session ? 'In' : 'Out',
+                        time: currentDate.toLocaleTimeString(),
+                        date: currentDate.toLocaleDateString()
                     };
                     console.log('new', newData)
                     this.scannedData.push(newData); 

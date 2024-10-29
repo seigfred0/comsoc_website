@@ -25,7 +25,7 @@ const createStudent = async (req, res) => {
     try {
         const { name, year } = req.body;
         const studentData = {
-            name: name.trim().toLowerCase(),
+            name: name.trim().toUpperCase(),
             year
         }
 
@@ -33,8 +33,8 @@ const createStudent = async (req, res) => {
 
         if (validate) {
             const uniqueId = uuidv4(); 
-            const qrCodeData = await qrcode.toDataURL(uniqueId);
-            studentData.uuid = uniqueId;
+            const qrCodeData = await qrcode.toDataURL(uniqueId + "&" + name + "&" + year);
+            studentData.uid = uniqueId;
             studentData.qrcode = qrCodeData;
             
             const result = await studentModel.createStudent(studentData)
