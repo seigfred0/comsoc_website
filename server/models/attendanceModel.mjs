@@ -1,0 +1,4 @@
+
+const checkAttendance = () => {};
+
+const updateAttendance = () => {}
