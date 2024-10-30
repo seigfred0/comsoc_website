@@ -1,6 +1,7 @@
 import qrCodeApi from '../../api/qrCodeApi.mjs'
 
 // https://docs.google.com/spreadsheets/d/17L_wPeeG2LRJjVMhtQzRjPqDBpRZ3SkoK4nXHIk9Jew/edit?gid=802696440#gid=802696440
+
 export const QRCode = {
     /* html */
     template: 
