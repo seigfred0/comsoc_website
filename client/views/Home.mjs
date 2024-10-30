@@ -3,21 +3,86 @@
 export const Home = {
     /* html */
     template: `
-        <h2>Welcome to the Home Page</h2>
-        <router-link to="/scan">Scanner</router-link>
+       
         <div class="home_page">
-            <div class="home_page-header"></div>
-            <div class="home_page-about"></div>
+            <div class="home_page-header">
+                <h1>This is main header</h1>
+            </div>
+
+
+
+            <div class="home_page-about">
+                <img src="/assets/imgs/about-pic2.jpg" alt="About Picture" class="rotated-image">
+                <div class="about-container container">
+                    <h1 class="home-h1">About us</h1>
+
+                </div>
+            </div>
 
 
 
 
             <div class="home_page-timeline">
-                <div class="timeline_container">
+                <div class="planets">
+                    <img class="uranus planet" src="/assets/svg/uranus.svg" alt="uranus" />
+                    <img class="venus planet" src="/assets/svg/venus.svg" alt="venus" />
+                    <img class="neptune planet" src="/assets/svg/neptune.svg" alt="neptune" />
+                </div>
+              
+                <div class="timeline_container container">
                     <div class="timeline-top">
-                        
+                        <p class="subtitle">Events</p>
+                        <h1 class="home-h1">ICT Days Event Dates</h1>
+                        <p>
+                            Join us for three exciting days filled with innovation, hands-on activities, and opportunities to dive deep into the world of technology.
+                        </p>
+                        <button>REGISTER NOW</button>
                     </div>
-                    <div class="timeline-bottom"></div>
+                    
+                    <div class="timeline-bottom">
+                        <div class="timeline-row">
+                            <img src="/assets/svg/timeline.svg" alt="line" />
+                            <div>
+                                <h2 class="row-date">Nov. 6, 2024</h2>
+                                <h3 class="row-day">Wednesday</h3>
+                                <ul class="row-list">
+                                    <li>Opening | 1:00 - 4:00 pm</li>
+                                    <li>Multiplayer Games</li>
+                                    <li>Type Shark</li>
+                                    <li>Codefest</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="timeline-row">
+                            <img src="/assets/svg/timeline.svg" alt="line" />
+                            <div>
+                                <h2 class="row-date">Nov. 7, 2024</h2>
+                                <h3 class="row-day">Thursday</h3>
+                                <ul class="row-list">
+                                    <li>Opening | 1:00 - 4:00 pm</li>
+                                    <li>Multiplayer Games</li>
+                                    <li>Type Shark</li>
+                                    <li>Codefest</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-row">
+                            <img src="/assets/svg/timeline.svg" alt="line" />
+                            <div>
+                                <h2 class="row-date">Nov. 8, 2024</h2>
+                                <h3 class="row-day">Friday</h3>
+                                <ul class="row-list">
+                                    <li>Opening | 1:00 - 4:00 pm</li>
+                                    <li>Multiplayer Games</li>
+                                    <li>Type Shark</li>
+                                    <li>Codefest</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
 
