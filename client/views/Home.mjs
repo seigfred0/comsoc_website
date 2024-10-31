@@ -12,10 +12,36 @@ export const Home = {
 
 
             <div class="home_page-about">
-                <img src="/assets/imgs/about-pic2.jpg" alt="About Picture" class="rotated-image">
                 <div class="about-container container">
-                    <h1 class="home-h1">About us</h1>
-
+                    <div class="about-top">
+                        <h1 class="home-h1">
+                            About us
+                        </h1>
+                        <img src="/assets/svg/star.svg" alt="star">    
+                    </div>
+                    <div class="about-bottom">
+                        <div class="about-p first">
+                            <h3>Computer Society Club</h3>
+                            <p>
+                                At the heart of the Computer Society Club is a group of passionate minds eager to dive into tech, innovate, and grow together in the ever-evolving digital landscape
+                            </p>
+                        </div>
+                        <div class="about-p">
+                            <h3>Just for fun</h3>
+                            <p>
+                                Just for fun! We're here to share our passions, showcase our creativity, and spread a little joy. Join us on this lighthearted journey as we explore what brings us happiness!
+                            </p>
+                        </div>
+                        <div class="about-p">
+                            <h3>Objective</h3>
+                            <p>
+                                Our main goal is to ignite interest in technology and innovation at our ICT event. Join us as we explore the latest trends, share knowledge, and connect with fellow tech enthusiasts!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-fade">
+                    <img src="/assets/imgs/white-fade.png" />
                 </div>
             </div>
 
