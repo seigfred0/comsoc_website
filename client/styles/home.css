@@ -1,7 +1,54 @@
+
+.navigation {
+    width: 80%;
+    max-width: 350px;
+    position:fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 10px;
+    z-index: 100;
+    
+}
+.navigation-links {
+    display: flex;
+    justify-content: space-between; 
+    background-color: white;
+    padding: 0.5em 0.5em;
+    border-radius: 30px;
+    border: 1px solid black;    
+
+    font-family: var(--font-heading);
+    align-items: center;
+    margin-top: 1em;
+
+}
+
+.navigation-links ul {
+    display: flex;
+    list-style: none;
+    gap: 0.7em;
+    align-items: center;
+    padding-left: 1em;
+    font-size: 0.8rem;
+}
+
+.navigation-links button {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0.5em 1em;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+}
+
 .home-h1 {
     font-family: var(--font-heading);
     font-size: 2.25rem;
 }
+
+
 /* About Sections */
 
 .home_page-about  {
@@ -12,6 +59,8 @@
     background-repeat: no-repeat;
      */
 }
+
+
 
 .home_page-about {
     min-height: 700px;
@@ -24,8 +73,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 145px;
-
-    
 }
 
 .about-top {

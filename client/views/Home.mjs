@@ -5,11 +5,23 @@ export const Home = {
     template: `
        
         <div class="home_page">
+            <div class="navigation">
+                <div class="navigation-links">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Tools</li>
+                    </ul>
+                    <button @click="navigate('registration')">
+                        Register
+                    </button>
+                </div>
+            </div>
+
+            
             <div class="home_page-header">
                 <h1>This is main header</h1>
             </div>
-
-
 
             <div class="home_page-about">
                 <div class="about-container container">

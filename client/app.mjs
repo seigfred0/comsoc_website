@@ -26,6 +26,9 @@ const router = VueRouter.createRouter({
 
 app.component('Button', PrimeVue.Button);
 app.component('Drawer', PrimeVue.Drawer);
+app.component('FloatLabel', PrimeVue.FloatLabel);
+app.component('InputText', PrimeVue.InputText);
+app.component('Select', PrimeVue.Select);
 
 
 app.use(router);
