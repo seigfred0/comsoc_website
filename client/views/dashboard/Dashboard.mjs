@@ -29,7 +29,15 @@ export const Dashboard = {
                             <h1>Student Attendance</h1>
                             <p>View the attendance for each day or for a specific student.</p>
                         </div>
-                        <div class="top-btns"></div>
+                        <div class="top-btns">
+                            <button class="search-btn">Search</button>
+                            
+                                <AutoComplete v-model="selectedCountry" optionLabel="name" :suggestions="filteredCountries" @complete="search"  class="custom-autocomplete"
+                                 placeholder="Select a country" />
+
+                            <DatePicker v-model="date" class="custom-datepicker" placeholder="Date"/>
+
+                        </div>
                     </div>
                     <div class="attendance-middle">
 

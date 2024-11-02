@@ -34,6 +34,8 @@ app.component('Select', PrimeVue.Select);
 app.component('Avatar', PrimeVue.Avatar);
 app.component('DataTable', PrimeVue.DataTable);
 app.component('Column', PrimeVue.Column);
+app.component('AutoComplete', PrimeVue.AutoComplete);
+app.component('DatePicker', PrimeVue.DatePicker);
 
 
 app.use(router);

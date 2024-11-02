@@ -105,4 +105,65 @@
     background-image: url('/assets/imgs/panel-design.png');
     background-repeat: no-repeat;
     left: 0;
+    color: var(--white);
+    padding: 1em;
+    display: flex;
+
+    flex-direction: column;
+    
+
+}
+
+.attendance-top .top-text {
+    align-self: flex-end;
+    text-align: end;
+}
+
+.top-text h1 {
+    font-size: 3rem;
+}
+
+.top-text p {
+    font-size: 0.8rem;
+}
+
+.top-btns {
+    display: flex;  
+    flex-direction: row-reverse;
+    gap: 0.5em;
+    margin-top: 1.5em;
+}
+
+.top-btns .search-btn {
+    padding: 0.5em 1.25em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    background-color: var(--orange);
+}
+
+.p-datepicker-input {
+    font-family: var(--font-heading);
+    padding: 0.4em;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.p-autocomplete-input {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: 0.8rem;
+    width: 300px;
+
+}
+
+.p-autocomplete-loader {
+    top: 15px
+}
+.p-input-wrapper {
+    padding: 0.4em;
 }
