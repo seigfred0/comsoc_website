@@ -1,0 +1,108 @@
+
+
+.dashboard_page {
+    background: var(--black); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1.5em;
+    justify-content: space-between;
+}
+
+.side-panel {
+    /* background: red; */
+    flex: 0.25;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 2em 1em 2em 3em;
+    color: var(--white);
+}
+
+
+.side-top h4 {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    margin-top: 0.5em;
+
+}
+
+.side-top p {
+    font-family: var(--font-heading);
+    color: var(--orange);    
+}
+
+.side-top p {
+    font-size: 1rem;
+}
+
+.side-middle {
+    margin-top: 6em;
+}
+
+.side-middle ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.side-middle ul li {
+    color: rgba(255, 255, 255, 0.522);
+    cursor: pointer;
+}
+
+.side-bottom {
+    margin-top: 4em;
+    padding-top: 3em;
+    border-top: 2px solid white;
+    max-width: 200px;
+
+}
+
+.side-bottom button {
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-family: var(--font-heading );
+    color: rgba(255, 255, 255, 0.522);
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+.side-middle .highlight {
+    color: var(--orange);    
+}
+
+
+.main-panel {
+    background: var(--white);
+    flex: 1;
+    border-radius: 20px;
+    padding: 1.75em;
+    /* max-width: 1100px; */
+    height: 900px
+
+}
+
+
+.attendance-panel {
+    /* background-color: red; */
+    border-radius: 20px;
+    width: 100%;
+    
+}
+
+.attendance-top {
+    width: 100%;
+    height: 170px;
+    background-color: var(--black);
+    border-radius: 22px;
+    background-image: url('/assets/imgs/panel-design.png');
+    background-repeat: no-repeat;
+    left: 0;
+}

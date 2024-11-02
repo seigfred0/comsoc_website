@@ -1,5 +1,6 @@
 @import "home.css";
 @import "registration.css";
+@import "dashboard.css";
 
 :root {
     
@@ -40,6 +41,105 @@ body {
 
 }
 
+.attendance-middle {
+    max-height: 850px;
+    overflow: hidden;
+}
+
+.p-datatable-table {
+    margin-top: 1em;
+    font-family: var(--font-heading);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    background-color: var(--white);
+    padding-left: 1em;
+}
+
+.p-datatable-td {
+    padding-top: 1em;
+}
+
+.p-datatable-column-header-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #B5B7C0;
+    font-size: 0.85rem;
+    background-color: var(--white);
+
+}
+
+
+
+.p-datatable .p-datatable-tbody > tr > td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #292D32;
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(105, 105, 105, 0.244)
+}
+
+.status-button {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 60px;
+    color: white;
+    
+}
+
+
+.status-in {
+    background-color: rgba(22, 192, 152, 0.489); 
+    color: #008767;
+    border: 1px solid #008767;
+    font-weight: 500;
+}
+
+.status-out {
+    background-color: #FFC5C5; 
+    border: 1px solid #DF0404;
+    color: #DF0404;
+}
+
+.p-paginator {
+    background-color: var(--white);
+    padding-top: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
+}
+
+.data-btns {
+    color: var(--black);   
+}
+
+.data-btns:hover {
+    background-color: rgba(129, 129, 129, 0.181);   
+}
+.data-btns:active {
+    background-color: rgba(129, 129, 129, 0.181);   
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,var(--orange) 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,var(--orange));
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+}
+
+@keyframes l13{ 
+100%{transform: rotate(1turn)}
+}
 
 
 .p-floatlabel .p-inputtext {

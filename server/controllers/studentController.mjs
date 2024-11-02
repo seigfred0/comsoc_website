@@ -38,9 +38,9 @@ const createStudent = async (req, res) => {
             studentData.qrcode = qrCodeData;
             
             const result = await studentModel.createStudent(studentData)
-            return res.send(result);
+            return res.send({result, qrCodeData});
         }
-        res.status(404).send({ message: 'Already registered / Not a student of STI' });
+        res.send({ message: 'Already registered / Not a student of STI' });
     } catch (error) {
         console.log({ errorMessage: 'Error creating student', error})
     }

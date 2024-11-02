@@ -1,4 +1,4 @@
-import qrCodeApi from '../../api/qrCodeApi.mjs'
+import api from '../../api/apis.mjs';
 
 // https://docs.google.com/spreadsheets/d/17L_wPeeG2LRJjVMhtQzRjPqDBpRZ3SkoK4nXHIk9Jew/edit?gid=802696440#gid=802696440
 
@@ -93,7 +93,7 @@ export const QRCode = {
             this.visibleBottom = false
         },
         async sendAttendance() {
-            const result = await qrCodeApi.sendAttendance(this.scannedData)
+            const result = await api.sendAttendance(this.scannedData)
             this.scannedData = []
 
         },

@@ -1,6 +1,7 @@
 import { Home } from "./views/Home.mjs";
 import { Registration } from "./views/attendance/Registration.mjs";
 import { QRCode } from "./views/attendance/QRCode.mjs";
+import { Dashboard } from "./views/dashboard/Dashboard.mjs";
 
 const app = Vue.createApp({
     data() {
@@ -20,7 +21,8 @@ const router = VueRouter.createRouter({
     routes: [
         { path: '/', component: Home },
         { path: '/registration', component: Registration },
-        { path: '/scan', component: QRCode }
+        { path: '/scan', component: QRCode },
+        { path: '/admin', component: Dashboard}
     ]
 })
 
@@ -29,6 +31,9 @@ app.component('Drawer', PrimeVue.Drawer);
 app.component('FloatLabel', PrimeVue.FloatLabel);
 app.component('InputText', PrimeVue.InputText);
 app.component('Select', PrimeVue.Select);
+app.component('Avatar', PrimeVue.Avatar);
+app.component('DataTable', PrimeVue.DataTable);
+app.component('Column', PrimeVue.Column);
 
 
 app.use(router);

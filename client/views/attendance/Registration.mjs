@@ -8,15 +8,48 @@ export const Registration = {
         <div class="registration_page">
             <img class="registration-star" src="/assets/svg/orange-star.svg" alt="Orange Star" />
 
+            <div class="loading-container">
+                <div v-if="isLoading" class="loader"></div>
+            </div>
+
             <div class="registration-container container">
                 <Button icon="pi pi-times" @click="navigate('/')" class="register_close"/>
-                <div class="registration-text">
+
+                <div  v-if="steps.one" class="registration-text">
                     <h1 class="font-heading">Register</h1>
                     <p>Join the fun. Witness skills.</p>
                 </div>
 
+                <div v-show="steps.two" class="registration-text step-two">
+                    <h1 class="font-heading">Registration Complete</h1>
+                    <p>
+                        Download or screenshot your QR Code. 
+                        You will use this throughout the event.
+                    </p>
 
-                <form class="registration-form" @submit.prevent="submitForm">
+                    
+                    <div class="qr-code">
+                        <img :src="success.qrCode"/>
+                    </div>
+
+                    <div class="qr-button">
+                        <!-- save qr code -->
+                        <a 
+                            :href="success.qrCode" 
+                            download="QR_Code.png" 
+                            class="save-btn"
+                        >
+                            Save QR Code
+                        </a>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <form  v-if="steps.one" class="registration-form" @submit.prevent="submitForm">
                     <FloatLabel variant="on">
                         <InputText id="username" v-model="name"/>
                         <label for="username">Name</label>
@@ -29,6 +62,7 @@ export const Registration = {
                         class="w-full md:w-56" 
                     />
                     <div class="form-bottom">
+                    <p v-show="errorMessage" class="registration-error">{{ errorMessage }}</p>
                         <button type="submit" class="register-btn">Register</button> 
                     </div>
                 </form>
@@ -41,6 +75,16 @@ export const Registration = {
     `,
     data() {
         return{
+            success: {
+                qrCode: null,
+                message: '',
+            },
+            steps: {
+                one: true,
+                two: false
+            } ,
+            isLoading: false,
+            errorMessage: null,
             name: '',
             selectedYear: null, 
             year: [
@@ -61,8 +105,7 @@ export const Registration = {
             const newName = this.name.trim().toLowerCase();
 
             if (!this.name || !this.selectedYear) {
-                console.log('complete it!!!')
-                alert('Invalid ')
+                this.errorMessage = 'Please fill in all fields';
                 return
             }
 
@@ -74,6 +117,16 @@ export const Registration = {
             console.log(data)
 
             const result = await api.createStudent(data);
+
+            if (result && result.qrCodeData) {
+                
+                this.success.qrCode = result.qrCodeData;
+                this.steps.one = false;
+                this.steps.two = true;
+
+            }
+            console.log(result)
+            this.errorMessage = result.message
         }
 
     },
