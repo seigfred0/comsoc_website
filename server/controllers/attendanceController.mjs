@@ -7,7 +7,6 @@ const checkAttendance = async (req, res) => {
     try {
         const studentInformation = req.body; 
         const result = await attendanceModel.checkAttendance(studentInformation);
-        
         res.status(200).json(result);
     } catch (error) {
         console.log(error);
@@ -16,6 +15,19 @@ const checkAttendance = async (req, res) => {
         });
     }
 };
+
+const getAttendance = async (req, res) => {
+    try {
+        const result = await attendanceModel.getAttendance();
+        // console.log('--', result)
+        res.send(result);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+}
 
 // const checkAttendance = async (req, res) => {
 //     try {
@@ -307,4 +319,7 @@ const checkAttendance = async (req, res) => {
 */
 
 
-export default {checkAttendance}
+export default {
+    checkAttendance,
+    getAttendance
+}

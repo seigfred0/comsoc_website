@@ -1,3 +1,4 @@
+import apis from "../../api/apis.mjs";
 
 export const Dashboard = {
     /* html */
@@ -8,7 +9,6 @@ export const Dashboard = {
                     <Avatar label="AV" class="mr-2" size="xlarge" shape="circle" />
                     <h4 class="dashboard-name">seigfred</h4>
                     <p>Administrator</p>
-
                 </div>
                 <div class="side-middle">
                     <ul>
@@ -30,41 +30,29 @@ export const Dashboard = {
                             <p>View the attendance for each day or for a specific student.</p>
                         </div>
                         <div class="top-btns">
-                            <button class="search-btn">Search</button>
-                            
-                                <AutoComplete v-model="selectedCountry" optionLabel="name" :suggestions="filteredCountries" @complete="search"  class="custom-autocomplete"
-                                 placeholder="Select a country" />
+                            <button class="search-btn" @click="search">Search</button>
+                            <AutoComplete v-model="selectedStudent" optionLabel="name"  class="custom-autocomplete" placeholder="student name" />
 
-                            <DatePicker v-model="date" class="custom-datepicker" placeholder="Date"/>
+                            <!--@complete="search" <DatePicker v-model="date" class="custom-datepicker" placeholder="Date"/> -->
 
                         </div>
                     </div>
                     <div class="attendance-middle">
-
-                        <DataTable :value="students" tableStyle="min-width: 50rem" class="custom-datatable" paginator :rows="7">
+                        <DataTable :value="attendance" tableStyle="min-width: 50rem" class="custom-datatable" paginator :rows="7">
                             <template #paginatorstart>
                                 <div style="display: flex; gap: 8px;">
-                                    <Button type="button" icon="pi pi-refresh" text class="data-btns" />
-                                    <Button type="button" icon="pi pi-download" text class="data-btns" />
+                                    <Button @click="reset" type="button" icon="pi pi-refresh" text class="data-btns" />
+                                    <Button @click="exportToExcel" type="button" icon="pi pi-download" text class="data-btns" />
                                 </div>
                             </template>
-                    
-                            <Column field="studentName" header="Student Name" style="width: 230px"></Column>
-                            <Column field="year" header="Year"></Column>
-                            <Column field="date" header="Date"></Column>
-                            <Column field="time" header="Time" sortable></Column>
-                            <Column field="session" header="Session"></Column>
-                            <Column field="status" header="Status">
-                                <template #body="slotProps">
-                                    <span
-                                        class="status-button"
-                                        :class="{'status-in': slotProps.data.status === 'In', 'status-out': slotProps.data.status === 'Out'}">
-                                        {{ slotProps.data.status }}
-                                    </span>
-                                </template>
-                            </Column>
+                            <Column field="name" header="Student Name" style="width: 230px"></Column>
+                            <Column field="year" header="Year" sortable></Column>
+                            <Column field="date" header="Date" sortable></Column>
+                            <Column field="session.amIn" header="am In"></Column>
+                            <Column field="session.amOut" header="am Out"></Column>
+                            <Column field="session.pmIn" header="pm In"></Column>
+                            <Column field="session.pmOut" header="pm Out"></Column>
                         </DataTable>
-                    
                     </div>
                     <div class="attendance-bottom"></div>
                 </div>
@@ -73,133 +61,64 @@ export const Dashboard = {
     `,
     data() {
         return {
-            students: [
-                {
-                    studentName: 'Seigfred Sayson Espenosa',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '☀️ 8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson Random Names XYZ',
-                    year: '2Y',
-                    date: '10/22/2024',
-                    time: '🌄 10:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '🌙 8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '11:56 am',
-                    session: 'morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: '☀️ morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: '☀️ morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: '☀️ morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: '☀️ morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'Out'
-                },
-                {
-                    studentName: 'Seigfred Sayson',
-                    year: '1Y',
-                    date: '10/22/2024',
-                    time: '8:56 am',
-                    session: 'morning', 
-                    status: 'In'
-                }
-            ]
-
+            attendance: [],
+            searchAttendance: [],
+            date: null,
+            selectedStudent: "",
         }
     },
     methods: {
+        exportToExcel() {
+            const transformedData = this.attendance.map(student => {
+                return {
+                    date: student.date,
+                    name: student.name,
+                    year: student.year,
+                    amIn: student.session.amIn || '', 
+                    amOut: student.session.amOut || '', 
+                    pmIn: student.session.pmIn || '', 
+                    pmOut: student.session.pmOut || '' 
+                };
+            });
+            const worksheet = XLSX.utils.json_to_sheet(transformedData);
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, 'Students');
+            XLSX.writeFile(workbook, 'StudentsData.xlsx');
+        },
+        search() {
+            const foundStudent = this.findStudentByName(this.selectedStudent);
+            if (foundStudent) {
+                this.attendance = [foundStudent]
+                console.log('Found student:', foundStudent);
+            } else {
+                console.log('Student not found');
+            }
+        },
+        findStudentByName(name) {
+            return this.attendance.find(student => 
+                student.name.toLowerCase().startsWith(name.toLowerCase())
+            );
+        },
+        async reset() {
+            const result = await apis.getAttendance();
+            this.attendance = result;
+            this.selectedStudent = '';
 
+        }
+    },
+    computed: {
+        // filteredStudents() {
+        //     return this.attendance.map(student => {
+        //         return { name: student.name }; 
+        //     });
+            
+
+        // }
+    },
+    async mounted() {
+        const result = await apis.getAttendance();
+        console.log('hhhh', result)
+        this.attendance = result;
     },
     components: {
 

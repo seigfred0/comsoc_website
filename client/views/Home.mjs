@@ -145,7 +145,7 @@ export const Home = {
                             <p class="number">03</p>
                             <h1 class="title">attendance</h1>
                         </div>
-                        <div class="tools-link" @click="navigate('resources')">
+                        <div class="tools-link" @click="navigate('login')">
                             <p class="number">04</p>
                             <h1 class="title">resources</h1>
                         </div>

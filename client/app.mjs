@@ -2,6 +2,7 @@ import { Home } from "./views/Home.mjs";
 import { Registration } from "./views/attendance/Registration.mjs";
 import { QRCode } from "./views/attendance/QRCode.mjs";
 import { Dashboard } from "./views/dashboard/Dashboard.mjs";
+import { Login } from "./views/Login.mjs";
 
 const app = Vue.createApp({
     data() {
@@ -21,10 +22,25 @@ const router = VueRouter.createRouter({
     routes: [
         { path: '/', component: Home },
         { path: '/registration', component: Registration },
-        { path: '/scan', component: QRCode },
-        { path: '/admin', component: Dashboard}
+        { 
+            path: '/scan', 
+            component: QRCode,
+            meta: { requiresAuth: true }
+        },
+        { path: '/admin', component: Dashboard},
+        { path: '/login', component: Login, name: 'Login'}
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    const isAuthenticated = !!localStorage.getItem('authToken'); 
+
+    if (to.meta.requiresAuth && !isAuthenticated) {
+        next({ name: 'Login' }); 
+    } else {
+        next(); 
+    }
+});
 
 app.component('Button', PrimeVue.Button);
 app.component('Drawer', PrimeVue.Drawer);

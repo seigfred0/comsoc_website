@@ -1,5 +1,40 @@
 import { connect } from '../utils/dbUtils.mjs';
 
+const getAttendance = async () => {
+    try {
+        const collection = await connect('attendance');
+        const result = await collection.aggregate([
+            { $match: { uid: 'attendance_records' } },
+            {
+                $project : {
+                    _id: 0,
+                    attendance: {$objectToArray: "$attendance"}
+                }
+            },
+            { $unwind: "$attendance" },
+            { $unwind: "$attendance.v" },
+            {
+                $project: {
+                    date: "$attendance.k",         
+                    studentId: "$attendance.v.studentId",
+                    name: "$attendance.v.name",
+                    year: "$attendance.v.year",
+                    session: "$attendance.v.session"
+                }
+            }
+        ]
+        ).toArray()
+
+        // console.log(result)
+        console.log('--', result)
+
+        return result
+    } catch (error) {
+        console.log(error);
+        throw new Error('An error occurred while getting attendance: ' + error.message);
+    }
+}
+
 const checkAttendance = async (studentInformation) => {
     try {
         const data = studentInformation;
@@ -8,6 +43,7 @@ const checkAttendance = async (studentInformation) => {
         
         for (const studentData of data) {
             const sessionField = checkSession(studentData.session, studentData.time);
+            console.log('========',studentData)
 
             const attendanceRecord = await collection.findOne({
                 uid: "attendance_records",
@@ -41,6 +77,7 @@ const checkAttendance = async (studentInformation) => {
                                 [`attendance.${studentData.date}`]: {
                                     studentId: studentData.studentId,
                                     name: studentData.name,
+                                    year: studentData.year,
                                     session: { [sessionField]: studentData.time }
                                 }     
                             }
@@ -58,6 +95,7 @@ const checkAttendance = async (studentInformation) => {
                                 {
                                     studentId: studentData.studentId,
                                     name: studentData.name,
+                                    year: studentData.year,
                                     session: { [sessionField]: studentData.time }
                                 }
                             ]
@@ -74,7 +112,7 @@ const checkAttendance = async (studentInformation) => {
             results
         };
     } catch (error) {
-        console.error(error);
+        console.log(error);
         throw new Error('An error occurred while processing attendance: ' + error.message);
     }
 };
@@ -114,6 +152,7 @@ const checkSession = (sessionType, time) => {
 }
 
 export default {
-    checkAttendance
+    checkAttendance,
+    getAttendance
 }
 
