@@ -2,8 +2,9 @@
 
 const login = async (req, res) => {
     try {
-        const credential = req.body;
-        console.log(credential);
+        const { name, password } = req.body;
+        console.log(name, password);
+
         
         res.send({ success: true });
     } catch (error) {

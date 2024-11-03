@@ -40,11 +40,10 @@ const login = async (data) => {
         const response = await axios.post(`${url}/attendance/login`, data);
         // const { token } = response.data;
         // localStorage.setItem('authToken', token); 
-        if (response) {
-            return true
-        } else {
-            return false
-        }        
+        console.log(response);
+       if (response) {
+        return false
+       }     
     } catch (error) {
         console.log(error)
         return false
@@ -56,8 +55,10 @@ const logout = () => {
 }
 
 const isAuthenticated = () => {
-    return !!localStorage.getItem('authToken'); // Boolean check
+    return localStorage.getItem('isLoggedIn') === 'true';
+
 }
+
 
 
 export default {

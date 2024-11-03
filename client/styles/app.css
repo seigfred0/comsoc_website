@@ -20,6 +20,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: var(--font-body);
 }
@@ -178,6 +180,7 @@ body {
     width: 90%;
     max-width: 400px;
 }
+
 
 
 
@@ -368,4 +371,172 @@ body {
     top: 0;
     left: 50%;            
     transform: translate(-50%, -50%);
+}
+
+
+
+@media (min-width: 900px) {
+    .tools_container {
+        max-width: 1200px;
+    }
+    .home_page-tools img {
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 50px;
+        left: 40px;
+       
+        animation: rotate 20s linear infinite;
+        transform-origin: center; /* Center the rotation */
+        
+    }
+
+    .home_page-timeline {
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+
+    .timeline_container {
+        max-width: 700px;
+    }
+
+    .planet {
+        height: 250px;
+        width: 250px;
+    }
+
+    .planets .uranus {
+        right: 150px;
+        top: 0px;
+        transform: rotate(-20deg);
+
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease;  */
+        animation: floatOne 5s infinite alternate; 
+    }
+
+    .planets .venus {
+        right: 150px;
+        top: 200px;   
+        animation: floatTwo 7s ease-in-out infinite;
+
+    }
+
+    .planets .neptune {
+        right: 150px;
+        top: 400px;
+        animation: floatThree 7s ease-in-out infinite;
+
+    }
+
+    .timeline-top h1 {
+        font-family: var(--font-heading);
+        font-size: 3.5rem;
+    }
+
+    .timeline-top  p{
+        font-size: 1rem;
+    }
+
+    .home_page-about {
+        min-height: 1500px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top ;
+    }
+
+    .about-container {
+        max-width: 1200px;
+    }
+
+    .about-top h1 {
+        font-size: 3.5rem;
+    }
+    .about-p h3 {
+        font-size: 1.75rem;
+    }
+
+    .about-p p {
+        font-size: 0.75rem;
+        max-width: 500px;
+    }
+
+    .about-bottom {
+        gap: 2.5em;
+        margin-top: 2.75em;
+    }
+   
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);     }
+}
+@keyframes floatOne {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes floatTwo {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(20px);
+        transform: rotate(-20deg);
+
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+@keyframes floatThree {
+    0% {
+        transform: translateY(-250px);
+        
+    }
+    50% {
+        transform: translateY(20px);
+        transform: rotate(20deg);
+
+    }
+    100% {
+        transform: translateY(-250px);
+
+    }
+}
+@keyframes hover2 {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-50px); 
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0);
+        transform: rotate(-20deg); 
+    }
 }

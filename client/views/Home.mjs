@@ -20,7 +20,9 @@ export const Home = {
 
             
             <div class="home_page-header">
-                <h1>This is main header</h1>
+                <img src="/assets/svg/header.svg"/>
+                <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
+
             </div>
 
             <div class="home_page-about">
@@ -74,7 +76,7 @@ export const Home = {
                         <p>
                             Join us for three exciting days filled with innovation, hands-on activities, and opportunities to dive deep into the world of technology.
                         </p>
-                        <button>REGISTER NOW</button>
+                        <button @click="navigate('registration')">REGISTER NOW</button>
                     </div>
                     
                     <div class="timeline-bottom">
@@ -129,7 +131,10 @@ export const Home = {
 
 
             <div class="home_page-tools">
-                <img src="/assets/svg/white-star.svg" alt="White Star" />
+                <div class="star-container">
+                
+                    <img src="/assets/svg/white-star.svg" alt="White Star" />
+                </div>
                 <div class="tools_container container">
                     <p class="subtitle">Tools</p>
                     <div class="tools-div">

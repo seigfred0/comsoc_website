@@ -3,6 +3,7 @@ import { Registration } from "./views/attendance/Registration.mjs";
 import { QRCode } from "./views/attendance/QRCode.mjs";
 import { Dashboard } from "./views/dashboard/Dashboard.mjs";
 import { Login } from "./views/Login.mjs";
+import apis from "./api/apis.mjs";
 
 const app = Vue.createApp({
     data() {
@@ -22,20 +23,17 @@ const router = VueRouter.createRouter({
     routes: [
         { path: '/', component: Home },
         { path: '/registration', component: Registration },
-        { 
-            path: '/scan', 
-            component: QRCode,
-            meta: { requiresAuth: true }
-        },
+        { path: '/scan', component: QRCode, name: 'Scan', meta: { requiresAuth: true }},
         { path: '/admin', component: Dashboard},
         { path: '/login', component: Login, name: 'Login'}
     ]
 })
 
 router.beforeEach((to, from, next) => {
-    const isAuthenticated = !!localStorage.getItem('authToken'); 
+    const isValid = apis.isAuthenticated(); 
+    console.log('Navigating to:', to.path);
 
-    if (to.meta.requiresAuth && !isAuthenticated) {
+    if (to.meta.requiresAuth && !isValid) {
         next({ name: 'Login' }); 
     } else {
         next(); 

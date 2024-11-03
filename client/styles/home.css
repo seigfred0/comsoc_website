@@ -1,4 +1,27 @@
 
+.home_page-header {
+    min-height: 600px;
+    width: 100%;
+    background-image: url('/assets/imgs/hero-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.home_page-header .bottom-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+
+
+.home_page-header img{
+    height: auto;
+    width: 100%;
+
+}
 .navigation {
     width: 80%;
     max-width: 350px;
@@ -240,6 +263,12 @@
     font-weight: 800;
 }
 
+.timeline-top button:hover{
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
 .timeline-row {
     display: flex;
     position: relative;
@@ -329,3 +358,5 @@
 .tools-link .title {
     font-size: 2.5rem;
 }
+
+

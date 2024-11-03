@@ -61,34 +61,9 @@ export const Login = {
         navigate(where) {
             this.$router.push(where);
         },
-        async submitForm() {
-            // const newName = this.name.trim().toLowerCase();
-            // const newPassword = this.password.trim().toLowerCase();
-
-            // if (!this.name || !this.password) {
-            //     this.errorMessage = 'Please fill in all fields';
-            //     return
-            // }
-
-            // const data = {
-            //     name: newName,
-            //     password: newPassword
-            // }
-
-
-
-            // const result = await apis.login(data)
-
-            this.$router.push('/scan')
-
-            // console.log(result)
-
-            // if (result) {
-            //     this.$router.push('/scan');
-            // } else {
-            //     this.errorMessage = result.message || 'Login failed. Please try again.';
-            // }
-            // this.errorMessage = result.message
+        submitForm() {
+            localStorage.setItem('isLoggedIn', 'true');
+            this.$router.push('/scan');
         }
 
     },
