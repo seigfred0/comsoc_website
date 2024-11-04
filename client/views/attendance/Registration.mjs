@@ -116,6 +116,7 @@ export const Registration = {
 
             console.log(data)
 
+            // console.log('waiting for api')
             const result = await api.createStudent(data);
 
             if (result && result.qrCodeData) {

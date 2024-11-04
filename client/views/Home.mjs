@@ -21,7 +21,7 @@ export const Home = {
             
             <div class="home_page-header">
                 <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
-                <img class="title-header" src="/assets/svg/header-desktop.svg"/>
+              
                 <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
                 <p>Explore the world of tech with us... Your journey starts here</p>
 

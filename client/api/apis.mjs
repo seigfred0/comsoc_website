@@ -1,5 +1,8 @@
 
 const url = "http://localhost:5000"
+// const url = "http://47.128.83.182:5000"
+// const url = "http://ec2-47-128-83-182.ap-southeast-1.compute.amazonaws.com:5000"
+// const url = "http://comsocmalaybalay.online:5000"
 
 const sendAttendance = async (data) => {
     try {
