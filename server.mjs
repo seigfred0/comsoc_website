@@ -22,6 +22,10 @@ app.get('/*', (req, res) => {
     res.sendFile(path.resolve('client', 'index.html'))
 })
  
+<<<<<<< Updated upstream
 app.listen(5000, () => {
+=======
+app.listen(4000, '0.0.0.0',() => {
+>>>>>>> Stashed changes
     console.log('Server RUNNING')
 })

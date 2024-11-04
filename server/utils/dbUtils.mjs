@@ -1,4 +1,14 @@
 import { MongoClient } from "mongodb";
+<<<<<<< Updated upstream
+=======
+import dotenv from 'dotenv';
+dotenv.config();
+
+
+const mongoUri = process.env.MONGODB_URI;
+// const client = new MongoClient("mongodb://localhost:27017/");
+const client = new MongoClient("mongodb://localhost:27017/");
+>>>>>>> Stashed changes
 
 const client = new MongoClient("mongodb://localhost:27017/");
 let db;

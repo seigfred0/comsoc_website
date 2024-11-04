@@ -17,6 +17,115 @@
     box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
+=======
+@keyframes scroll-right {
+    0% { transform: translateX(0); }          /* Start at the beginning */
+    100% { transform: translateX(-50%); }     /* Move fully to the left, stopping at halfway */
+}
+
+.scroller-galaxies {
+    position: absolute;
+    top: 2%;
+    left: 0px;
+    width: 180%; /* Adjust width as needed */
+    overflow: hidden; /* Hide overflow for scrolling effect */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.scroller-galaxies {
+    display: inline-flex; /* Inline flex allows the scroll effect */
+    align-items: center;
+    gap: 60px;
+    padding-left: 0;
+    margin: 0;
+    animation: scroll-right 26s linear infinite; /* Apply animation */
+}
+
+.scroller-galaxies li {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.galaxy-image {
+    width: 30px; /* Adjust image size */
+    height: auto;
+}
+
+.words-top {
+    font-family: var(--font-heading);
+    position: absolute;
+    text-align: center;
+    font-size: 11.25rem;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FFFFFF 40%, #FF6500 60%);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.words-bottom {
+    font-family: var(--font-heading);
+    position: absolute;
+    text-align: center;
+    font-size: 6.25rem;
+    top: 27%;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FFFFFF, #FF6500);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-desktop-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Optional: to make it span the full width */
+    /* Add other styling as needed */
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(0); }          /* Start at the beginning */
+    100% { transform: translateX(-50%); }     /* Move fully to the left, stopping at halfway */
+}
+
+.scroller-galaxies2 {
+    position: absolute;
+    top: 2%;
+    left: 0px;
+    width: 180%; /* Adjust width as needed */
+    overflow: hidden; /* Hide overflow for scrolling effect */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.scroller-galaxies2 {
+    display: inline-flex; /* Inline flex allows the scroll effect */
+    align-items: center;
+    gap: 60px;
+    padding-left: 0;
+    margin: 0;
+    animation: scroll-right 26s linear infinite; /* Apply animation */
+}
+
+.scroller-galaxies2 li {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.galaxy-image2 {
+    width: 30px; /* Adjust image size */
+    height: auto;
+}
+
+>>>>>>> Stashed changes
 body {
     font-family: var(--font-body);
 }
@@ -32,6 +141,154 @@ body {
 
 }
 
+<<<<<<< Updated upstream
+=======
+.subtitle{
+    font-family: var(--font-body);
+
+}
+
+.attendance-middle {
+    max-height: 850px;
+    overflow: hidden;
+}
+
+.p-datatable-table {
+    margin-top: 1em;
+    font-family: var(--font-heading);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    background-color: var(--white);
+    padding-left: 1em;
+}
+
+.p-datatable-td {
+    padding-top: 1em;
+}
+
+.p-datatable-column-header-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #B5B7C0;
+    font-size: 0.85rem;
+    background-color: var(--white);
+
+}
+
+
+
+.p-datatable .p-datatable-tbody > tr > td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #292D32;
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(105, 105, 105, 0.244)
+}
+
+.status-button {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 60px;
+    color: white;
+    
+}
+
+
+.status-in {
+    background-color: rgba(22, 192, 152, 0.489); 
+    color: #008767;
+    border: 1px solid #008767;
+    font-weight: 500;
+}
+
+.status-out {
+    background-color: #FFC5C5; 
+    border: 1px solid #DF0404;
+    color: #DF0404;
+}
+
+.p-paginator {
+    background-color: var(--white);
+    padding-top: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
+}
+
+.data-btns {
+    color: var(--black);   
+}
+
+.data-btns:hover {
+    background-color: rgba(129, 129, 129, 0.181);   
+}
+.data-btns:active {
+    background-color: rgba(129, 129, 129, 0.181);   
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,var(--orange) 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,var(--orange));
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+}
+
+@keyframes l13{ 
+100%{transform: rotate(1turn)}
+}
+
+
+.p-floatlabel .p-inputtext {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    padding-left: 0.75em;
+    
+}
+
+.p-floatlabel {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    color: orange;
+}
+
+.p-select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+
+    padding-left: 0.75em;
+}
+
+
+/* RESPONSIVE */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+
+
+>>>>>>> Stashed changes
 
 .secondary-btn {
     background-color: white;
@@ -227,4 +484,239 @@ body {
     top: 0;
     left: 50%;            
     transform: translate(-50%, -50%);
+<<<<<<< Updated upstream
+=======
+}
+
+@media (min-width: 1000px) {
+    .home_page-header .background-img {
+        padding-top: 0em;
+        height: 1000px;
+    } 
+    .home_page-header p {
+        position: absolute;
+        bottom: 20em;
+        color: rgba(190, 190, 190, 0.693);
+        font-size: 0.8rem;
+        
+        max-width: 200px;
+        text-align: center;
+        font-weight: 100;
+        position: absolute;
+     
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+}
+
+@media (min-width: 900px) {
+    .home_page-header {
+        min-height: 1000px;
+        
+    }
+    .home_page-header .background-img {
+        padding-top: 5em;
+        height: 1200px;
+    } 
+    .home_page-header p {
+        position: absolute;
+        bottom: 20em;
+        color: rgba(190, 190, 190, 0.693);
+        font-size: 0.8rem;
+        
+        max-width: 200px;
+        text-align: center;
+        font-weight: 100;
+        position: absolute;
+     
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: fadeIn 6s forwards;
+    } 
+    
+    .tools_container {
+        max-width: 1200px;
+    }
+    .home_page-tools img {
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 50px;
+        left: 40px;
+       
+        animation: rotate 20s linear infinite;
+        transform-origin: center; /* Center the rotation */
+        
+    }
+
+    .home_page-timeline {
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+
+    .timeline_container {
+        max-width: 700px;
+    }
+
+    .planet {
+        height: 250px;
+        width: 250px;
+    }
+
+    .planets .uranus {
+        right: 150px;
+        top: 0px;
+        transform: rotate(-20deg);
+
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease;  */
+        animation: floatOne 5s infinite alternate; 
+    }
+
+    .planets .venus {
+        right: 150px;
+        top: 200px;   
+        animation: floatTwo 7s ease-in-out infinite;
+
+    }
+
+    .planets .neptune {
+        right: 150px;
+        top: 400px;
+        animation: floatThree 7s ease-in-out infinite;
+
+    }
+
+    .timeline-top h1 {
+        font-family: var(--font-heading);
+        font-size: 3.5rem;
+    }
+
+    .timeline-top  p{
+        font-size: 1rem;
+    }
+
+    .home_page-about {
+        min-height: 1500px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top ;
+    }
+
+    .about-container {
+        max-width: 1200px;
+    }
+
+    .about-top h1 {
+        font-size: 3.5rem;
+    }
+    .about-p h3 {
+        font-size: 1.75rem;
+    }
+
+    .about-p p {
+        font-size: 0.75rem;
+        max-width: 500px;
+    }
+
+    .about-bottom {
+        gap: 2.5em;
+        margin-top: 2.75em;
+    }
+   
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        color: #444444;
+    }
+    to {
+        opacity: 1;
+        color: #ffffff;
+    }
+  }
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);     }
+}
+@keyframes floatOne {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes floatTwo {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(20px);
+        transform: rotate(-20deg);
+
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+@keyframes floatThree {
+    0% {
+        transform: translateY(-250px);
+        
+    }
+    50% {
+        transform: translateY(20px);
+        transform: rotate(20deg);
+
+    }
+    100% {
+        transform: translateY(-250px);
+
+    }
+}
+@keyframes hover2 {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-50px); 
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0);
+        transform: rotate(-20deg); 
+    }
+}
+
+@media (max-width:400px) {
+    .words-top {
+        font-size: 3rem;
+    }
+    .words-bottom {
+        font-size: 1.5rem;
+        margin-top: -8%;
+    }
+>>>>>>> Stashed changes
 }
