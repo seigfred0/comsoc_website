@@ -23,7 +23,7 @@ const router = VueRouter.createRouter({
     routes: [
         { path: '/', component: Home },
         { path: '/registration', component: Registration },
-        { path: '/scan', component: QRCode, name: 'Scan', meta: { requiresAuth: true }},
+        { path: '/scan', component: QRCode, name: 'Scan'},
         { path: '/admin', component: Dashboard},
         { path: '/login', component: Login, name: 'Login'}
     ]

@@ -1,8 +1,9 @@
 
 .home_page-header {
-    min-height: 600px;
+    /* min-height: 600px; */
     width: 100%;
-    background-image: url('/assets/imgs/hero-image.jpg');
+    /* background-image: url('/assets/imgs/hero-image.jpg'); */
+    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,10 +11,38 @@
     position: relative;
 }
 
+.home_page-header .background-img {
+    /* padding-top: 10em; */
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+} 
+
+.home_page-header .title-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
 .home_page-header .bottom-fade {
     position: absolute;
     bottom: 0;
     left: 0;
+} 
+
+.home_page-header p {
+    position: absolute;
+    bottom: 130px;
+    color: rgba(190, 190, 190, 0.693);
+    font-size: 0.6rem;
+    
+    max-width: 150px;
+    text-align: center;
+    font-weight: 100;
+     position: absolute;
+ 
+    left: 50%;
+    transform: translate(-50%, -50%);
 } 
 
 
@@ -28,7 +57,7 @@
     position:fixed;
     transform: translateX(-50%);
     left: 50%;
-    bottom: 10px;
+    bottom: 25px;
     z-index: 100;
     
 }
@@ -43,13 +72,18 @@
     font-family: var(--font-heading);
     align-items: center;
     margin-top: 1em;
+    cursor: pointer;
 
 }
+.navigation-links ul li:hover {
+    color: var(--orange);
+}
+
 
 .navigation-links ul {
     display: flex;
     list-style: none;
-    gap: 0.7em;
+    gap: 1.25em;
     align-items: center;
     padding-left: 1em;
     font-size: 0.8rem;
@@ -65,6 +99,15 @@
     border-radius: 25px;
     font-family: var(--font-heading);
 }
+
+
+.navigation-links button:hover {
+  
+    background-color: var(--orange);
+    cursor: pointer;
+   
+}
+
 
 .home-h1 {
     font-family: var(--font-heading);
@@ -323,15 +366,26 @@
     
 }
 
+
+
 .home_page-tools img {
     width: 180px;
     height: 180px;
     position: absolute;
-    left: -50px;
-    top: -50px;
+    left: -90px;
+    top: -60px;
 
     transform: rotate(45deg); 
+    animation: rotateS 20s linear infinite;
+
    
+}
+
+@keyframes rotateS {
+    from {
+        transform: rotate(0deg);    }
+    to {
+        transform:  rotate(360deg);     }
 }
 
 .tools-div {
@@ -348,6 +402,13 @@
     gap: 1.5em;
     border-bottom: 1px solid black;
     padding-bottom: 1em;
+}
+
+.tools-link:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    border-radius: 5px;
+    padding-left: 2em;
 }
 
 .tools-link .number {

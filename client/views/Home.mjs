@@ -8,9 +8,9 @@ export const Home = {
             <div class="navigation">
                 <div class="navigation-links">
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Tools</li>
+                        <li @click="goTo('events')">Events</li>
+                        <li @click="goTo('about')">About</li>
+                        <li @click="goTo('tools')">Tools</li>
                     </ul>
                     <button @click="navigate('registration')">
                         Register
@@ -20,12 +20,14 @@ export const Home = {
 
             
             <div class="home_page-header">
-                <img src="/assets/svg/header.svg"/>
+                <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
+                <img class="title-header" src="/assets/svg/header-desktop.svg"/>
                 <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
+                <p>Explore the world of tech with us... Your journey starts here</p>
 
             </div>
 
-            <div class="home_page-about">
+            <div class="home_page-about" id="about">
                 <div class="about-container container">
                     <div class="about-top">
                         <h1 class="home-h1">
@@ -37,8 +39,9 @@ export const Home = {
                         <div class="about-p first">
                             <h3>Computer Society Club</h3>
                             <p>
-                                At the heart of the Computer Society Club is a group of passionate minds eager to dive into tech, innovate, and grow together in the ever-evolving digital landscape
+                                Computer Society Club is a group of passionate minds eager to dive into tech, innovate, and grow together in the ever-evolving digital landscape
                             </p>
+
                         </div>
                         <div class="about-p">
                             <h3>Just for fun</h3>
@@ -62,7 +65,7 @@ export const Home = {
 
 
 
-            <div class="home_page-timeline">
+            <div class="home_page-timeline" id="events">
                 <div class="planets">
                     <img class="uranus planet" src="/assets/svg/uranus.svg" alt="uranus" />
                     <img class="venus planet" src="/assets/svg/venus.svg" alt="venus" />
@@ -130,7 +133,7 @@ export const Home = {
 
 
 
-            <div class="home_page-tools">
+            <div class="home_page-tools" id="tools">
                 <div class="star-container">
                 
                     <img src="/assets/svg/white-star.svg" alt="White Star" />
@@ -169,6 +172,12 @@ export const Home = {
     methods: {
         navigate(where) {
             this.$router.push(`/${where}`)
+        },
+        goTo(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth'});
+            }
         }
 
     }
