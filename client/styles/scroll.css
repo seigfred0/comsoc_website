@@ -1,0 +1,175 @@
+.scroll {
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 20%, transparent)
+}
+
+.scroll div {
+    width: 2500px;
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll var(--time) linear infinite;
+    animation-delay: calc(var(--time)*-1);
+    will-change: transform;
+}
+
+.scroll div img {
+    width: 1000px;
+    height: 100px;
+}
+
+.scroll span::after {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Set the width of the image */
+    height: 20px; /* Set the height of the image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 8px; /* Space between text and image */
+}
+
+/* Set images for each galaxy */
+.scroll span:nth-child(1)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll span:nth-child(2)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll span:nth-child(3)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll span:nth-child(4)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll span:nth-child(5)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+/* Repeat for the second <div> block if necessary */
+.scroll div:nth-child(2) span:nth-child(1)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll div:nth-child(2) span:nth-child(2)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll div:nth-child(2) span:nth-child(3)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll div:nth-child(2) span:nth-child(4)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll div:nth-child(2) span:nth-child(5)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll div:nth-child(2) {
+    animation: scroll2 var(--time) linear infinite;
+    animation-delay: calc(var(--time)/-2);
+    will-change: transform;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.galaxies {
+    width: 2000px;
+    display: inline-flex;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 20s;
+    will-change: transform;
+}
+
+.scroll.two {
+    width: 1200px;
+    top: -5em;
+    gap: 2em;
+    margin-left: 8px; /* Space between text and image */
+}
+
+/* Set images for each galaxy */
+.scroll.two span:nth-child(1)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two span:nth-child(2)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two span:nth-child(3)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two span:nth-child(4)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two span:nth-child(5)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+/* Repeat for the second <div> block if necessary */
+.scroll.two div:nth-child(2) span:nth-child(1)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two div:nth-child(2) span:nth-child(2)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two div:nth-child(2) span:nth-child(3)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two div:nth-child(2) span:nth-child(4)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two div:nth-child(2) span:nth-child(5)::after {
+    background-image: url('../assets/svg/Vector.svg');
+}
+
+.scroll.two div:nth-child(2) {
+    animation: scroll2 var(--time) linear infinite;
+    animation-delay: calc(var(--time)/-2);
+    will-change: transform;
+}
+
+@media (max-width:400px) {
+    
+}

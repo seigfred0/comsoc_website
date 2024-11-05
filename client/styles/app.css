@@ -1,6 +1,7 @@
 @import "home.css";
 @import "registration.css";
 @import "dashboard.css";
+@import "scroll.css";
 
 :root {
     
@@ -61,9 +62,9 @@
 .galaxy-image {
     width: 30px; 
     height: auto;
-}
+} */
 
-.words-top {
+ .words-top {
     font-family: var(--font-heading);
     position: absolute;
     text-align: center;
@@ -89,20 +90,21 @@
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} 
 
 .header-desktop-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; 
+}
 
 @keyframes scroll-right {
     0% { transform: translateX(0); }          
     100% { transform: translateX(-50%); }    
 }
 
-.scroller-galaxies2 {
+/* .scroller-galaxies2 {
     position: absolute;
     top: 2%;
     left: 0px;
@@ -130,8 +132,6 @@
     width: 30px;
     height: auto;
 } */
-
-
 
 /* ENDDDDD */
 
@@ -706,4 +706,14 @@ body {
         transform: translateY(0);
         transform: rotate(-20deg); 
     }
+}
+
+@media (max-width:400px) {
+    .words-top {
+        font-size: 3rem;
+    }
+    .words-bottom {
+        font-size: 1.5rem;
+        margin-top: -8%;
+    }   
 }
