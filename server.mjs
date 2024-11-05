@@ -22,6 +22,6 @@ app.get('/*', (req, res) => {
     res.sendFile(path.resolve('client', 'index.html'))
 })
  
-app.listen(5000,'0.0.0.0',() => {
+app.listen(5000, () => {
     console.log('Server RUNNING')
 })

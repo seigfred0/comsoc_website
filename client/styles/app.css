@@ -1,6 +1,7 @@
 @import "home.css";
 @import "registration.css";
 @import "dashboard.css";
+@import "scroll.css";
 
 :root {
     
@@ -61,48 +62,57 @@
 .galaxy-image {
     width: 30px; 
     height: auto;
-}
+} */
 
-.words-top {
+ .words-top {
     font-family: var(--font-heading);
     position: absolute;
     text-align: center;
-    font-size: 11.25rem;
+    font-size: 12vw;
     top: 12%;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to bottom, #FFFFFF 40%, #FF6500 60%);
-    background-clip: text;
-    color: transparent;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.278), white,  rgba(0, 0, 0, 0.278));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    /* color: transparent; */
+    /* text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); */
+    /* color: white;
+    text-wrap:wrap; */
+
+    /* background: -webkit-linear-gradient( var(--orange)); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .words-bottom {
     font-family: var(--font-heading);
     position: absolute;
     text-align: center;
-    font-size: 6.25rem;
-    top: 27%;
+    font-size: 6vw;
+    top: 30%;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to bottom, #FFFFFF, #FF6500);
+    /* background-image: linear-gradient(to bottom, #FFFFFF, #FF6500); */
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} 
 
 .header-desktop-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; 
+}
 
 @keyframes scroll-right {
     0% { transform: translateX(0); }          
     100% { transform: translateX(-50%); }    
 }
 
-.scroller-galaxies2 {
+/* .scroller-galaxies2 {
     position: absolute;
     top: 2%;
     left: 0px;
@@ -130,8 +140,6 @@
     width: 30px;
     height: auto;
 } */
-
-
 
 /* ENDDDDD */
 
@@ -705,5 +713,32 @@ body {
     100% {
         transform: translateY(0);
         transform: rotate(-20deg); 
+    }
+}
+
+@media (max-width:500px) {
+    /* .words-top {
+        font-size: 3rem;
+    }
+    .words-bottom {
+        font-size: 1.5rem;
+        margin-top: -8%;
+    }    */
+    .scroll {
+        height: 50px;
+    }
+
+    .planets .venus {
+        right: 0;
+        top: 250px;   
+        animation: floatThree 7s ease-in-out infinite;
+
+    }
+
+    .planets .neptune {
+        right: 0;
+        bottom: -300px;
+        animation: float 6s ease-in-out infinite;
+
     }
 }

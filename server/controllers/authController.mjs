@@ -10,11 +10,12 @@ const login = async (req, res) => {
         const { name, password } = req.body;
         console.log(name, password);
 
-        const collection = await connect("attendance");
+        const collection = await connect('attendance');
 
         const user = await collection.findOne({ uid: "attendance_admin"});
+        
         const userList = user.users;
-        const validUser = userList.find((item) => item.name === name);
+        const validUser = await userList.find((item) => item.name === name);
 
         console.log('hh',validUser)
 
@@ -29,7 +30,7 @@ const login = async (req, res) => {
         })
 
         if (!validPassword) {
-            return res.json({ message: 'Invalid password' });
+            return res.send({ message: 'Invalid password' });
         }
 
         const token = jwt.sign({ name:  validUser.name }, process.env.SECRET_KEY, { expiresIn: '1h'})

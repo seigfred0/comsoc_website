@@ -18,53 +18,20 @@ export const Home = {
                 </div>
             </div>
 
-            
-            <!-- <div class="home_page-header">
-                <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
-              
-                <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
-                <p>Explore the world of tech with us... Your journey starts here</p>
-
-            </div>
-
-            -->
-
             <div class="home_page-header">
                 <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
                 <img class="header-desktop-img" src="/assets/svg/top-fade.svg"/>
                 <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
             
-            <!--
-                    <div class="home_page-scroller">
-                        <ul class="scroller-galaxies">
-                        
-                            <li>ANDROMEDA GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>MILKY WAY GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>BLACK EYE GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-
-                            <li>ANDROMEDA GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>MILKY WAY GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>BLACK EYE GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-
-                             <li>ANDROMEDA GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>MILKY WAY GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                            <li>BLACK EYE GALAXY</li>
-                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
-                        </ul>
-                    </div>
-
-                -->
+                <div class="scroll" style="--time:40s">
+                    <div>
+                        <img class="galaxies" src="/assets/svg/snippet.svg" />
+                    </div> 
+                     <div>
+                        <img class="galaxies" src="/assets/svg/snippet.svg" />
+                    </div> 
+                </div> 
                     
-
-
                     <div class="home_page-words">   
                 
                         <h1 class="words-top">Innovations</h1>
@@ -106,39 +73,31 @@ export const Home = {
                         </div>
                     </div>
                 </div>
-                <div class="white-fade">
-                    <img src="/assets/imgs/white-fade.png" />
-                    <div class="about-scroller">
-                                <ul class="scroller-galaxies2">
-                                    <li>ANDROMEDA GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>MILKY WAY GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>BLACK EYE GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-        
-                                    <li>ANDROMEDA GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>MILKY WAY GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>BLACK EYE GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-        
-                                     <li>ANDROMEDA GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>MILKY WAY GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                    <li>BLACK EYE GALAXY</li>
-                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
-                                </ul>
+                    <div class="white-fade">
+                        <img src="/assets/imgs/white-fade.png" />
+                        <!-- <div class="scroll two" style="--time:20s">
+                            <div>
+                                    <span class="galaxies two">Andromeda Galaxy</span>    
+                                    <span class="galaxies two">Milky Way Galaxy</span>    
+                                    <span class="galaxies two">Black Eye Galaxy</span>  
+                                    <span class="galaxies two">Saggitarius A Galaxy</span>  
+                                    <span class="galaxies two">Sombrero Galaxy</span> 
                             </div>
+                            <div>
+                                    <span class="galaxies two">Andromeda Galaxy</span>    
+                                    <span class="galaxies two">Black Eye Galaxy</span>  
+                                    <span class="galaxies two">Saggitarius A Galaxy</span>  
+                                    <span class="galaxies two">Milky Way Galaxy</span>    
+                                    <span class="galaxies two">Sombrero Galaxy</span>    
+                            </div>
+                        </div> -->
+                        
                     </div>
-            </div>
+                </div>
 
-
-
-
-            <div class="home_page-timeline" id="events">
+                
+                <div class="home_page-timeline" id="events">
+            
                 <div class="planets">
                     <img class="uranus planet" src="/assets/svg/uranus.svg" alt="uranus" />
                     <img class="venus planet" src="/assets/svg/venus.svg" alt="venus" />
@@ -162,10 +121,13 @@ export const Home = {
                                 <h2 class="row-date">Nov. 6, 2024</h2>
                                 <h3 class="row-day">Wednesday</h3>
                                 <ul class="row-list">
-                                    <li>Opening | 1:00 - 4:00 pm</li>
-                                    <li>Multiplayer Games</li>
+                                    <li>Program Proper | 9:00 - 10:30 pm</li>
+                                    <li>Seminar</li>
                                     <li>Type Shark</li>
                                     <li>Codefest</li>
+                                    <li>Graphic Design Contest</li>
+                                    <li>Bomb Squad</li>
+                                    <li>Mini Militia</li>
                                 </ul>
                             </div>
                             
@@ -176,10 +138,9 @@ export const Home = {
                                 <h2 class="row-date">Nov. 7, 2024</h2>
                                 <h3 class="row-day">Thursday</h3>
                                 <ul class="row-list">
-                                    <li>Opening | 1:00 - 4:00 pm</li>
-                                    <li>Multiplayer Games</li>
-                                    <li>Type Shark</li>
-                                    <li>Codefest</li>
+                                    <li>Codefest Continuation</li>
+                                    <li>Mobile Legends</li>
+                                    <li>Call of Duty</li>
                                 </ul>
                             </div>
                         </div>
@@ -189,10 +150,11 @@ export const Home = {
                                 <h2 class="row-date">Nov. 8, 2024</h2>
                                 <h3 class="row-day">Friday</h3>
                                 <ul class="row-list">
-                                    <li>Opening | 1:00 - 4:00 pm</li>
-                                    <li>Multiplayer Games</li>
-                                    <li>Type Shark</li>
-                                    <li>Codefest</li>
+                                    <li>Mobile Legends Championship</li>
+                                    <li>Obstacle Course</li>
+                                    <li>Call of Duty Championship</li>
+                                    <li>Mr. & Ms. Computer Society</li>
+                                    <li>Awarding</li>
                                 </ul>
                             </div>
                         </div>

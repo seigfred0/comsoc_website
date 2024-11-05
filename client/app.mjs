@@ -23,7 +23,7 @@ const router = VueRouter.createRouter({
     routes: [
         { path: '/', component: Home, name: 'Home' },
         { path: '/registration', component: Registration },
-        { path: '/scan', component: QRCode, name: 'Scan', meta: { requiresAuth: true }},
+        { path: '/scan', component: QRCode, name: 'Scan'},
         { path: '/admin', component: Dashboard, name: 'Dashboard', meta: { requiresAuth: true }},
         { path: '/login', component: Login, name: 'Login'}
     ]
@@ -34,6 +34,7 @@ router.beforeEach((to, from, next) => {
     console.log('Token:', token);
 
     console.log(to)
+    console.log(token)
 
     if (to.meta.requiresAuth && !token) {
         sessionStorage.setItem('intendedRoute', to.fullPath)

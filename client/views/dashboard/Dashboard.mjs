@@ -15,7 +15,7 @@ export const Dashboard = {
                         <li>Dashboard</li>
                         <li class="highlight">Attendance</li>
                         <li>Tabulation</li>
-                        <li>QR Code</li>
+                        <li @click="generateQRPage">QR Code</li>
                     </ul>
                 </div>
                 <div class="side-bottom">
@@ -104,6 +104,9 @@ export const Dashboard = {
             this.attendance = result;
             this.selectedStudent = '';
 
+        },
+        generateQRPage() {
+            this.$router.push('/generate')
         }
     },
     computed: {

@@ -67,13 +67,15 @@ export const Login = {
                 password: this.password
             }
 
-            console.log(data)
-            const loginApi = await apis.login(data);
+        
 
-            if (loginApi.data.token) {
+            console.log(data)
+            const loginApi = await apis.login(data);            
+
+            if (loginApi.data.token != null || undefined) {
                 const token = loginApi.data.token;
                 console.log('yyyy', token)
-                sessionStorage.setItem('authToken', token);
+                const tokenAvailable = sessionStorage.setItem('authToken', token);
 
                 const intendedRoute = sessionStorage.getItem('intendedRoute');
                 if (intendedRoute) {

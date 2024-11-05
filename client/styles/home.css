@@ -1,18 +1,14 @@
 
 .home_page-header {
-    /* min-height: 600px; */
+    height: 500px;
     width: 100%;
-    /* background-image: url('/assets/imgs/hero-image.jpg'); */
-    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     position: relative;
 }
 
 .home_page-header .background-img {
-    /* padding-top: 10em; */
     width: 100%;
     height: 500px;
     object-fit: cover;
@@ -419,5 +415,3 @@
 .tools-link .title {
     font-size: 2.5rem;
 }
-
-
