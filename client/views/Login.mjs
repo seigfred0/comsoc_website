@@ -61,9 +61,32 @@ export const Login = {
         navigate(where) {
             this.$router.push(where);
         },
-        submitForm() {
-            localStorage.setItem('isLoggedIn', 'true');
-            this.$router.push('/scan');
+        async submitForm() {
+            const data = {
+                name: this.name,
+                password: this.password
+            }
+
+            console.log(data)
+            const loginApi = await apis.login(data);
+
+            if (loginApi.data.token) {
+                const token = loginApi.data.token;
+                console.log('yyyy', token)
+                sessionStorage.setItem('authToken', token);
+
+                const intendedRoute = sessionStorage.getItem('intendedRoute');
+                if (intendedRoute) {
+                    sessionStorage.removeItem('intendedRoute'); 
+                    this.$router.push(intendedRoute); 
+                } else {
+                    this.$router.push({ name: 'Home' }); 
+                }
+                this.$router.push({ name: 'Home' });
+            } else {
+                this.errorMessage = loginApi.data.message
+            }
+
         }
 
     },

@@ -21,23 +21,27 @@ const app = Vue.createApp({
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(), 
     routes: [
-        { path: '/', component: Home },
+        { path: '/', component: Home, name: 'Home' },
         { path: '/registration', component: Registration },
-        { path: '/scan', component: QRCode, name: 'Scan'},
-        { path: '/admin', component: Dashboard},
+        { path: '/scan', component: QRCode, name: 'Scan', meta: { requiresAuth: true }},
+        { path: '/admin', component: Dashboard, name: 'Dashboard', meta: { requiresAuth: true }},
         { path: '/login', component: Login, name: 'Login'}
     ]
 })
 
 router.beforeEach((to, from, next) => {
-    const isValid = apis.isAuthenticated(); 
-    console.log('Navigating to:', to.path);
+    const token = sessionStorage.getItem('authToken');
+    console.log('Token:', token);
 
-    if (to.meta.requiresAuth && !isValid) {
+    console.log(to)
+
+    if (to.meta.requiresAuth && !token) {
+        sessionStorage.setItem('intendedRoute', to.fullPath)
         next({ name: 'Login' }); 
     } else {
         next(); 
     }
+    
 });
 
 app.component('Button', PrimeVue.Button);

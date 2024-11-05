@@ -21,7 +21,119 @@
     box-sizing: border-box;
 }
 
+/* START */
 
+
+
+/* @keyframes scroll-right {
+    0% { transform: translateX(0); }          
+    100% { transform: translateX(-50%); }    
+}
+.home_page-scroller {
+    overflow: hidden;
+    width: 100%;
+}
+.scroller-galaxies {
+    position: absolute;
+    top: 2%;
+    left: 0px;
+    width: 100%; 
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.scroller-galaxies {
+    display: inline-flex;
+    align-items: center;
+    gap: 150px;
+    padding-left: 0;
+    margin: 0;
+    animation: scroll-right 26s linear infinite;
+}
+
+.scroller-galaxies li {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.galaxy-image {
+    width: 30px; 
+    height: auto;
+}
+
+.words-top {
+    font-family: var(--font-heading);
+    position: absolute;
+    text-align: center;
+    font-size: 11.25rem;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FFFFFF 40%, #FF6500 60%);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.words-bottom {
+    font-family: var(--font-heading);
+    position: absolute;
+    text-align: center;
+    font-size: 6.25rem;
+    top: 27%;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #FFFFFF, #FF6500);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-desktop-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+@keyframes scroll-right {
+    0% { transform: translateX(0); }          
+    100% { transform: translateX(-50%); }    
+}
+
+.scroller-galaxies2 {
+    position: absolute;
+    top: 2%;
+    left: 0px;
+    width: 180%; 
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.scroller-galaxies2 {
+    display: inline-flex; 
+    align-items: center;
+    gap: 60px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.scroller-galaxies2 li {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.galaxy-image2 {
+    width: 30px;
+    height: auto;
+} */
+
+
+
+/* ENDDDDD */
 
 body {
     font-family: var(--font-body);

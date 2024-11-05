@@ -19,12 +19,61 @@ export const Home = {
             </div>
 
             
-            <div class="home_page-header">
+            <!-- <div class="home_page-header">
                 <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
               
                 <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
                 <p>Explore the world of tech with us... Your journey starts here</p>
 
+            </div>
+
+            -->
+
+            <div class="home_page-header">
+                <img class="background-img" src="/assets/imgs/hero-image.jpg"/>
+                <img class="header-desktop-img" src="/assets/svg/top-fade.svg"/>
+                <img class="bottom-fade" src="/assets/svg/background-fade.svg"/>
+            
+            <!--
+                    <div class="home_page-scroller">
+                        <ul class="scroller-galaxies">
+                        
+                            <li>ANDROMEDA GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>MILKY WAY GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>BLACK EYE GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+
+                            <li>ANDROMEDA GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>MILKY WAY GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>BLACK EYE GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+
+                             <li>ANDROMEDA GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>MILKY WAY GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                            <li>BLACK EYE GALAXY</li>
+                            <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image"></li>
+                        </ul>
+                    </div>
+
+                -->
+                    
+
+
+                    <div class="home_page-words">   
+                
+                        <h1 class="words-top">Innovations</h1>
+                        <h2 class="words-bottom">beyond Galaxies</h2>   
+                
+                    </div>
+                
+                <p>Explore the world of tech with us... Your journey starts here</p>
+            
             </div>
 
             <div class="home_page-about" id="about">
@@ -59,7 +108,31 @@ export const Home = {
                 </div>
                 <div class="white-fade">
                     <img src="/assets/imgs/white-fade.png" />
-                </div>
+                    <div class="about-scroller">
+                                <ul class="scroller-galaxies2">
+                                    <li>ANDROMEDA GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>MILKY WAY GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>BLACK EYE GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+        
+                                    <li>ANDROMEDA GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>MILKY WAY GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>BLACK EYE GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+        
+                                     <li>ANDROMEDA GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>MILKY WAY GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                    <li>BLACK EYE GALAXY</li>
+                                    <li><img src="/assets/svg/Vector.svg" alt="Galaxy Image" class="galaxy-image2"></li>
+                                </ul>
+                            </div>
+                    </div>
             </div>
 
 
