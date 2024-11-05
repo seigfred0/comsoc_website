@@ -4,6 +4,7 @@ import { QRCode } from "./views/attendance/QRCode.mjs";
 import { Dashboard } from "./views/dashboard/Dashboard.mjs";
 import { Login } from "./views/Login.mjs";
 import apis from "./api/apis.mjs";
+import { GenerateQR } from "./views/dashboard/GenerateQR.mjs";
 
 const app = Vue.createApp({
     data() {
@@ -25,7 +26,8 @@ const router = VueRouter.createRouter({
         { path: '/registration', component: Registration },
         { path: '/scan', component: QRCode, name: 'Scan'},
         { path: '/admin', component: Dashboard, name: 'Dashboard', meta: { requiresAuth: true }},
-        { path: '/login', component: Login, name: 'Login'}
+        { path: '/login', component: Login, name: 'Login'},
+        { path: '/generate', component: GenerateQR, name: 'GenerateQRCode'}
     ]
 })
 

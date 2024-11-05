@@ -8,7 +8,7 @@ export const QRCode = {
     `
         <div class="qr-page">
             <div class="qr-page_container container">
-                <Button icon="pi pi-times" @click="goHome" class="close-btn_qrpage"/>
+                <Button icon="pi pi-times" @click="goHome" class="close-btn_qrpage mobile-only"/>
                 <div>     
                     <h1 class="font-heading">Student QR Code</h1>
                     <p class="font-sub_heading">Scan and mark their attendance</p>
@@ -29,10 +29,46 @@ export const QRCode = {
                         icon="pi pi-clock"  
                         @click="toggleSession"
                     />
-                    <Button label="View" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
+                    <Button class="mobile-only" label="View" icon="pi pi-qrcode" @click="scanQRCode" class="cta-btn"/>
                 </div>
             </div>
-            <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" :show-close-icon="false">
+            <div class="desktop-qr">
+
+                <div class="drawer_list-scannedData">
+                    <ul class="test">
+                        <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
+                            <div class="list-top">
+                                <p>{{ item.name }}</p>
+                                <p>Session {{ item.session }}</p>
+                            </div>
+                            <div class="list-bottom">
+                                <p>{{ item.year }}</p>
+                                <p>{{ item.time }}</p>
+                            </div>
+                        </li>
+                        <!-- 
+                        
+                        <li class="scan-list">
+                            <div class="list-top">
+                                <p>Seigfred Sayson</p>
+                                <p>Session In</p>
+                            </div>
+                            <div class="list-bottom">
+                                <p>2nd Year</p>
+                                <p>9:30am</p>
+                            </div>
+                        </li>
+                        
+                        
+                        -->
+
+                    </ul>
+                </div>  
+                <div class="drawer-btns desktop">
+                    <Button label="Mark Attendance" icon="pi pi-check-circle" @click="sendAttendance" class="cta-btn"/>
+                </div>
+            </div>
+            <Drawer v-model:visible="visibleBottom" header="Attendance" position="bottom" :show-close-icon="false" class="drawer">
                 <div class="drawer_list-scannedData">
                     <ul class="test">
                         <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
@@ -63,7 +99,7 @@ export const QRCode = {
 
                     </ul>
                 </div>
-                <div class="drawer-btns">
+                <div class="drawer-btns mobile">
                     <Button label="Scan Again" icon="pi pi-qrcode" @click="closeDrawer" class="secondary-btn"/>
                     <Button label="Mark Attendance" icon="pi pi-check-circle" @click="sendAttendance" class="cta-btn"/>
                 </div>
