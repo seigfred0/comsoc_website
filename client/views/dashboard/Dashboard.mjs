@@ -1,4 +1,7 @@
 import apis from "../../api/apis.mjs";
+import { Attendance } from "./Attendance.mjs";
+import { GenerateQR } from "./GenerateQR.mjs";
+import { Tabulation } from "./Tabulation.mjs";
 
 export const Dashboard = {
     /* html */
@@ -11,51 +14,18 @@ export const Dashboard = {
                     <p>Administrator</p>
                 </div>
                 <div class="side-middle">
-                    <ul>
-                        <li>Dashboard</li>
-                        <li class="highlight">Attendance</li>
-                        <li>Tabulation</li>
-                        <li @click="generateQRPage">QR Code</li>
+                    <ul>                      
+                        <li @click="goTo('')"  :class="{highlight: currentPage === ''}">Attendance</li>
+                        <li @click="goTo('tabulation')" :class="{highlight: currentPage === 'tabulation'}">Tabulation</li>
+                        <li @click="goTo('generate')" :class="{highlight: currentPage === 'generate'}">QR Code</li>
                     </ul>
                 </div>
                 <div class="side-bottom">
-                    <button>Log Out</button>
+                    <button @click="logOut">Log Out</button>
                 </div>
             </div>
             <div class="main-panel">
-                <div class="attendance-panel">
-                    <div class="attendance-top">
-                        <div class="top-text">
-                            <h1>Student Attendance</h1>
-                            <p>View the attendance for each day or for a specific student.</p>
-                        </div>
-                        <div class="top-btns">
-                            <button class="search-btn" @click="search">Search</button>
-                            <AutoComplete v-model="selectedStudent" optionLabel="name"  class="custom-autocomplete" placeholder="student name" />
-
-                            <!--@complete="search" <DatePicker v-model="date" class="custom-datepicker" placeholder="Date"/> -->
-
-                        </div>
-                    </div>
-                    <div class="attendance-middle">
-                        <DataTable :value="attendance" tableStyle="min-width: 50rem" class="custom-datatable" paginator :rows="7">
-                            <template #paginatorstart>
-                                <div style="display: flex; gap: 8px;">
-                                    <Button @click="reset" type="button" icon="pi pi-refresh" text class="data-btns" />
-                                    <Button @click="exportToExcel" type="button" icon="pi pi-download" text class="data-btns" />
-                                </div>
-                            </template>
-                            <Column field="name" header="Student Name" style="width: 230px"></Column>
-                            <Column field="year" header="Year" sortable></Column>
-                            <Column field="date" header="Date" sortable></Column>
-                            <Column field="session.amIn" header="am In"></Column>
-                            <Column field="session.amOut" header="am Out"></Column>
-                            <Column field="session.pmIn" header="pm In"></Column>
-                            <Column field="session.pmOut" header="pm Out"></Column>
-                        </DataTable>
-                    </div>
-                    <div class="attendance-bottom"></div>
-                </div>
+                <component :is="currentPageComponent" />                
             </div>
         </div>
     `,
@@ -65,9 +35,20 @@ export const Dashboard = {
             searchAttendance: [],
             date: null,
             selectedStudent: "",
+            currentPage: '',
+            currentPage: ''
         }
     },
     methods: {
+        logOut() {
+            console.log('he')
+            sessionStorage.removeItem('authToken');
+            this.$router.push('/')
+        },
+        goTo(page) {
+            this.currentPage = page;
+            // this.$router.push(`/admin/${page}`);
+        },
         exportToExcel() {
             const transformedData = this.attendance.map(student => {
                 return {
@@ -106,7 +87,7 @@ export const Dashboard = {
 
         },
         generateQRPage() {
-            this.$router.push('/generate')
+            this.$router.push('/admin/generate')
         }
     },
     computed: {
@@ -117,6 +98,18 @@ export const Dashboard = {
             
 
         // }
+        currentPageComponent() {
+            switch (this.currentPage) {
+                case 'attendance':
+                    return Attendance;
+                case 'tabulation':
+                    return Tabulation;
+                case 'generate':
+                    return GenerateQR;
+                default:
+                    return Attendance; 
+            }
+        }
     },
     async mounted() {
         const result = await apis.getAttendance();
@@ -124,6 +117,6 @@ export const Dashboard = {
         this.attendance = result;
     },
     components: {
-
+        Attendance
     }
 }

@@ -55,7 +55,7 @@ export const QRCode = {
                         <li v-for="(item, index) in scannedData" :key="index" class="scan-list">
                             <div class="list-top">
                                 <p>{{ item.name }}</p>
-                                <p>Session {{ item.session }}</p>
+                                <p>{{ item.session }}</p>
                             </div>
                             <div class="list-bottom">
                                 <p>{{ item.year }}</p>
@@ -106,6 +106,36 @@ export const QRCode = {
         }
     },
     methods: {
+        getStatus(time) {
+            const [hours, minutes, ms] = time.split(':').map(Number);
+            
+            if ((hours === 7 && minutes >= 0) || (hours === 8) || (hours === 9 && minutes === 0)) {
+                return {
+                    session: "In",
+                    isAllowed: true
+                };
+            } else if ((hours === 11 && minutes >= 30) || (hours === 12 && minutes <= 40)) {
+                return {
+                    session: "Out",
+                    isAllowed: true
+                };
+            }else if ((hours === 12 && minutes >= 50) || (hours === 13) || (hours === 14)) {
+                return {
+                    session: "In",
+                    isAllowed: true
+                };
+            } else if ((hours === 16 && minutes >= 30) || (hours === 17) || (hours === 18) || (hours === 19) || (hours === 20 && minutes <= 0)) {
+                return {
+                    session: "Out",
+                    isAllowed: true
+                };
+            } else {
+                return {
+                    session: "Neither In nor Out",
+                    isAllowed: false
+                };
+            }
+        }, 
         notif() {
             this.$toast.add({ severity: 'success', summary: 'Attendance Check', detail: 'New Student Added', group: 'tl', life: 1500 });
         },
@@ -133,31 +163,47 @@ export const QRCode = {
             if (data && data.length > 0) {
                 const rawValue = data[0].rawValue;
                 const values = rawValue.split("&");
-
+                
                 if (values.length >= 3) {
                     this.error = false;
                     const [studentId, name, year] = values;
                     const currentDate = new Date()
+                    const newSession = currentDate.toLocaleTimeString('en-GB') 
+
+                    const testing = this.getStatus(newSession);
+                    const testing2 = testing.session;
 
                     const newData = {
                         studentId: studentId.trim(),
                         name: name.trim(),
                         year: year.trim(),
-                        session: this.session ? 'In' : 'Out',
+                        session: testing2,
+                        // session: this.session ? 'In' : 'Out',
                         time: currentDate.toLocaleTimeString(),
+
                         date: currentDate.toLocaleDateString()
                     };
                     console.log('new', newData)
-                    this.notif();
-                    this.scannedData.unshift(newData);
+                    console.log('++++', testing)
+
+                    if (testing.isAllowed) {
+
+    
+                        this.notif();
+                        this.scannedData.unshift(newData);
+                    } else {
+                        this.error = "DI PA RABA PWEDE";
+
+                    }
+                    
 
                 } else {
                     this.error = true;
                     this.error = 'Invalid QR Code, Try again'
                 }
-                this.allData.push(values)
-                console.log(this.allData)
-                if (this.attendanceCounter == 8) {
+                // this.allData.push(values)
+                // console.log(this.allData)
+                if (this.attendanceCounter == 5) {
                     console.log('send to database is 3')
                     this.sendAttendance();
                 }

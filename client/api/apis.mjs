@@ -2,10 +2,8 @@
 // const url = "http://172.20.10.3:5000"
 // const url = "https://ac59-131-226-115-61.ngrok-free.app"
 
-const url = "http://localhost:5000"
-// const url = "http://47.128.83.182:5000"
-// const url = "http://ec2-47-128-83-182.ap-southeast-1.compute.amazonaws.com:5000"
-// const url = "http://comsocmalaybalay.online:5000"
+// const url = "http://localhost:5000"
+const url = "http://comsocmalaybalay.online:5000"
 
 const sendAttendance = async (data) => {
     try {

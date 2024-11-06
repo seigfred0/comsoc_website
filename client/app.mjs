@@ -5,6 +5,9 @@ import { Dashboard } from "./views/dashboard/Dashboard.mjs";
 import { Login } from "./views/Login.mjs";
 import apis from "./api/apis.mjs";
 import { GenerateQR } from "./views/dashboard/GenerateQR.mjs";
+import { Tabulation } from "./views/dashboard/Tabulation.mjs";
+import { Attendance } from "./views/dashboard/Attendance.mjs";
+import { TabulationPage } from "./views/TabulationPage.mjs";
 
 const app = Vue.createApp({
     data() {
@@ -25,9 +28,20 @@ const router = VueRouter.createRouter({
         { path: '/', component: Home, name: 'Home' },
         { path: '/registration', component: Registration },
         { path: '/scan', component: QRCode, name: 'Scan'},
-        { path: '/admin', component: Dashboard, name: 'Dashboard', meta: { requiresAuth: true }},
-        { path: '/login', component: Login, name: 'Login'},
-        { path: '/generate', component: GenerateQR, name: 'GenerateQRCode'}
+        { 
+            path: '/admin', 
+            component: Dashboard, 
+            name: 'Dashboard', 
+            meta: { requiresAuth: true },
+            children: [
+                { path: 'generate', component: GenerateQR, name: 'AdminGenerateQR' },
+                { path: 'tabulation', component: Tabulation, name: 'Tabulation' },
+                { path: '', component: Attendance, name: 'Attendance' },
+            ]
+        },
+        { path: '/login', component: Login, name: 'Login' },
+        { path: '/tabulation', component: TabulationPage, name: 'Tabulation' },
+        // { path: '/generate', component: GenerateQR, name: 'GenerateQRCode'}
     ]
 })
 
@@ -44,6 +58,15 @@ router.beforeEach((to, from, next) => {
     } else {
         next(); 
     }
+
+    // next(async vm => {
+    //     try {
+    //         const result = await apis.getAttendance();
+    //         vm.attendance = result;
+    //     } catch (error) {
+    //         console.error('Error fetching attendance data:', error);
+    //     }
+    // });
     
 });
 
