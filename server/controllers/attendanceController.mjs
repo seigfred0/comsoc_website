@@ -29,6 +29,41 @@ const getAttendance = async (req, res) => {
     }
 }
 
+const getQrCode = async (req, res) => {
+    try {
+        const {studentName} = req.body;
+        const collection = await connect('attendance');
+        const result = await collection.aggregate([
+            { $match: { uid: 'attendance'} },
+            {
+                $project: {
+                    _id: 0,
+                    students: 1
+                }
+            },
+        ]).toArray();
+
+        const filtered = result[0].students;
+
+
+
+        const found = filtered.find((item) => {
+            return item.name === studentName.toUpperCase()
+        })
+
+        // console.log('---',found)
+        if (!found) {
+            return res.send("Student not found")
+        }
+        res.send(found.qrcode)
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+}
+
 // const checkAttendance = async (req, res) => {
 //     try {
 //         const data = req.body
@@ -321,5 +356,6 @@ const getAttendance = async (req, res) => {
 
 export default {
     checkAttendance,
-    getAttendance
+    getAttendance, 
+    getQrCode
 }

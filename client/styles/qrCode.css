@@ -1,0 +1,38 @@
+
+
+/* .test {
+    display: flex;
+} */
+
+.latest-scan {
+    color: var(--orange);
+    /* background-color: var(--orange); */
+    font-weight: 900; 
+}
+
+.scanned-name {
+    /* background-color: var(--black); */
+    border: 1px solid black;
+    color: black;
+    padding: 0.7em;
+    max-width: 400px;
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    box-shadow: 10px;
+
+}
+
+
+.qr-page-title {
+    position: absolute;
+    top: 60px;
+    /* padding: 4em; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.p-toast-message {
+    padding: 0.5em;
+}

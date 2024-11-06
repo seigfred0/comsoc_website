@@ -88,8 +88,8 @@ export const Registration = {
             name: '',
             selectedYear: null, 
             year: [
-                { name: 'Grade 11', code: '11G' },
-                { name: 'Grade 12', code: '12G' },
+                { name: 'Grade 11', code: 'G11' },
+                { name: 'Grade 12', code: 'G12' },
                 { name: '1st Year', code: '1Y' },
                 { name: '2nd Year', code: '2Y' },
                 { name: '3rd Year', code: '3Y' },
@@ -113,6 +113,8 @@ export const Registration = {
                 name: newName,
                 year: this.selectedYear['code'] 
             }
+
+
 
             console.log(data)
 

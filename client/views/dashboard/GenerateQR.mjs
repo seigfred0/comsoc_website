@@ -1,3 +1,4 @@
+import apis from "../../api/apis.mjs"
 
 
 export const GenerateQR = {
@@ -14,7 +15,6 @@ export const GenerateQR = {
                         <li>Dashboard</li>
                         <li class="highlight">Attendance</li>
                         <li>Tabulation</li>
-                        <li @click="generateQRPage">QR Code</li>
                     </ul>
                 </div>
                 <div class="side-bottom">
@@ -29,8 +29,8 @@ export const GenerateQR = {
                             <p>Forgot your QR Code?</p>
                         </div>
                         <div class="top-btns">
-                            <button class="search-btn" @click="search">Search</button>
-                            <AutoComplete v-model="selectedStudent" optionLabel="name"  class="custom-autocomplete" placeholder="student name" />
+                            <button class="search-btn">Search</button>
+                           
 
                             <!--@complete="search" <DatePicker v-model="date" class="custom-datepicker" placeholder="Date"/> -->
 
@@ -38,7 +38,8 @@ export const GenerateQR = {
                     </div>
                     <div class="attendance-middle">
                         <img :src="qrCode"/>
-                        <p>{{ qrCode }}</p>
+                        <button @click="findQR">Find</button>
+                        <input v-model="studentName" />
                         
                     </div>
                     <div class="attendance-bottom"></div>
@@ -50,10 +51,21 @@ export const GenerateQR = {
         return {
             qrCode: '',
             name: '',
+            studentName: ''
             
         }
     },
     methods: {
+        async findQR() {
+            const name = {
+                studentName: this.studentName
+            }
+            const qr = await apis.getQR(name);
+            this.qrCode = qr.data;
+            console.log(this.studentName)
+            console.log(qr.data)
+        }
 
     }
 }
+

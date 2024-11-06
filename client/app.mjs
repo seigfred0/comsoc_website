@@ -47,6 +47,8 @@ router.beforeEach((to, from, next) => {
     
 });
 
+app.use(PrimeVue.ToastService);
+
 app.component('Button', PrimeVue.Button);
 app.component('Drawer', PrimeVue.Drawer);
 app.component('FloatLabel', PrimeVue.FloatLabel);
@@ -57,6 +59,8 @@ app.component('DataTable', PrimeVue.DataTable);
 app.component('Column', PrimeVue.Column);
 app.component('AutoComplete', PrimeVue.AutoComplete);
 app.component('DatePicker', PrimeVue.DatePicker);
+app.component('Toast', PrimeVue.Toast);
+
 
 
 app.use(router);

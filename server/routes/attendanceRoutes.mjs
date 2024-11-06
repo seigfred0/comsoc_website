@@ -21,5 +21,8 @@ router.route('/')
     .get(attendanceCtrl.getAttendance)
     .post(attendanceCtrl.checkAttendance)
 
+router.route('/qrcode')
+    .post(attendanceCtrl.getQrCode)
+
 
 export default router;

@@ -4,8 +4,8 @@ dotenv.config();
 
 
 const mongoUri = process.env.MONGODB_URI;
-// const client = new MongoClient("mongodb://localhost:27017/");
-const client = new MongoClient(mongoUri);
+const client = new MongoClient("mongodb://localhost:27017/");
+// const client = new MongoClient(mongoUri);
 
 let db;
 
