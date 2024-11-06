@@ -122,36 +122,6 @@ export const QRCode = {
         }
     },
     methods: {
-        getStatus(time) {
-            const [hours, minutes, ms] = time.split(':').map(Number);
-            
-            if ((hours === 7 && minutes >= 0) || (hours === 8) || (hours === 9 && minutes === 0)) {
-                return {
-                    session: "Morning In",
-                    isAllowed: true
-                };
-            } else if ((hours === 11 && minutes >= 30) || (hours === 12 && minutes <= 40)) {
-                return {
-                    session: "Morning Out",
-                    isAllowed: true
-                };
-            }else if ((hours === 12 && minutes >= 50) || (hours === 13) || (hours === 14)) {
-                return {
-                    session: "Afternoon In",
-                    isAllowed: true
-                };
-            } else if ((hours === 16 && minutes >= 30) || (hours === 17) || (hours === 18) || (hours === 19) || (hours === 20 && minutes <= 0)) {
-                return {
-                    session: "Afternoon Out",
-                    isAllowed: true
-                };
-            } else {
-                return {
-                    session: "Neither In nor Out",
-                    isAllowed: false
-                };
-            }
-    }, 
         goHome() {
             this.$router.push("/")
         },
@@ -163,11 +133,11 @@ export const QRCode = {
             this.scannedData = []
 
         },
-        // toggleSession() {
-        //     this.session = !this.session
-        //     console.log(this.session)
+        toggleSession() {
+            this.session = !this.session
+            console.log(this.session)
 
-        // },
+        },
         scanQRCode() {
             this.visibleBottom = !this.visibleBottom;
         },
@@ -181,32 +151,26 @@ export const QRCode = {
                     const [studentId, name, year] = values;
                     const currentDate = new Date()
 
-                    const newSession = currentDate.toLocaleTimeString('en-GB') 
-                    
                     const newData = {
                         studentId: studentId.trim(),
                         name: name.trim(),
                         year: year.trim(),
-                        session: this.getStatus(newSession),
-                        time: currentDate.toLocaleTimeString('en-Gb'),
+                        session: this.session ? 'In' : 'Out',
+                        time: currentDate.toLocaleTimeString(),
                         date: currentDate.toLocaleDateString()
                     };
                     console.log('new', newData)
-                    console.log(this.getStatus(newSession))
-                    if (this.getStatus(newSession).isAllowed) {
-                        console.log('allowed scan')
-
-                    } 
-                    this.scannedData.push(newData);
+                    this.scannedData.push(newData); 
                     this.attendanceCounter = this.scannedData.length;
                 } else {
                     this.error = true;
-                    this.error = 'Invalid QR Code or surpassed time limit, Try again'
+                    this.error = 'Invalid QR Code, Try again'
                 }
                 this.allData.push(values)
                 console.log(this.allData)
             }
         }
+
     },
     components: {
         'qrcode-stream': window.VueQrcodeReader.QrcodeStream
