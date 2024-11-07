@@ -1,0 +1,1006 @@
+{
+    "_id": {
+      "$oid": "6720fb506056285d7a251a91"
+    },
+    "uid": "attendance_records",
+    "attendance": {
+      "11/5/2024": [
+        {
+          "studentId": "f72da828-4bde-44cc-8072-41c146ea646e",
+          "name": "seigfred sayson",
+          "year": "2Y",
+          "session": {
+            "pmIn": "5:01:46 PM"
+          }
+        }
+      ],
+      "11/6/2024": [
+        {
+          "studentId": "a8416c4a-be76-49ac-81bd-aafd8f1038f7",
+          "name": "seigfred sayson",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:11:04 AM",
+            "amOut": "11:11:35 AM",
+            "pmOut": "5:13:00 PM"
+          }
+        },
+        {
+          "studentId": "42934ec7-4a7d-4680-897a-8bc325f8b36b",
+          "name": "flynn axel rae yee",
+          "year": "2Y",
+          "session": {
+            "amIn": "7:05:29 AM"
+          }
+        },
+        {
+          "studentId": "13df4cf1-6626-4735-b845-a36317fd6cc8",
+          "name": "carmelo porras",
+          "year": "2Y",
+          "session": {
+            "amIn": "7:01:42 AM"
+          }
+        },
+        {
+          "studentId": "adce1407-734b-4b98-89a3-5758808a169a",
+          "name": "judah acher lamasan",
+          "year": "2Y",
+          "session": {
+            "amIn": "7:10:05 AM",
+            "pmIn": "1:19:52 PM",
+            "pmOut": "5:12:32 PM"
+          }
+        },
+        {
+          "studentId": "b83680f9-3d18-4d96-afcc-facdaa388334",
+          "name": "carl christian cimafranca",
+          "year": "2Y",
+          "session": {
+            "amIn": "7:58:24 AM",
+            "amOut": "11:08:33 AM",
+            "pmIn": "1:03:47 PM",
+            "pmOut": "5:12:31 PM"
+          }
+        },
+        {
+          "studentId": "841a440f-535f-4a4b-91d0-2d89cd8830b9",
+          "name": "jhonryl aboc",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:07:32 AM",
+            "pmIn": "5:08:21 PM"
+          }
+        },
+        {
+          "studentId": "1706bcf8-555a-48fc-a954-fea582c9e2e8",
+          "name": "lhimar tandog",
+          "year": "2Y",
+          "session": {
+            "amIn": "11:12:43 AM",
+            "pmIn": "1:02:20 PM",
+            "pmOut": "5:11:37 PM"
+          }
+        },
+        {
+          "studentId": "b5df4a1d-ccf4-4622-b0c3-d74146d0ee73",
+          "name": "gabriel mito sacupayo",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:13:53 AM",
+            "amOut": "11:11:17 AM",
+            "pmIn": "1:03:56 PM",
+            "pmOut": "5:11:08 PM"
+          }
+        },
+        {
+          "studentId": "7a9d939b-0f2f-4357-bf40-1d23a1317ac8",
+          "name": "ana lorna bautista",
+          "year": "G12",
+          "session": {
+            "amIn": "8:08:35 AM",
+            "amOut": "11:15:36 AM",
+            "pmIn": "12:59:24 PM"
+          }
+        },
+        {
+          "studentId": "cb83317b-373a-49a3-8f2e-25c18f8e34aa",
+          "name": "junric adelante",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:07:35 AM",
+            "amOut": "11:11:54 AM",
+            "pmIn": "1:01:04 PM",
+            "pmOut": "5:13:19 PM"
+          }
+        },
+        {
+          "studentId": "7ad1428d-6c43-457e-a8be-1a5b082b1e30",
+          "name": "kent brian guantero",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:14:44 AM",
+            "amOut": "11:16:47 AM",
+            "pmIn": "12:59:30 PM",
+            "pmOut": "5:12:33 PM"
+          }
+        },
+        {
+          "studentId": "fbb86e19-83c2-4996-83d1-14570828020f",
+          "name": "wanard james galinato",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:29 AM",
+            "pmIn": "1:02:06 PM",
+            "pmOut": "5:10:02 PM"
+          }
+        },
+        {
+          "studentId": "4a286fe5-2ead-473f-a2bc-31f0630b2cda",
+          "name": "dice jean cahanap",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:58 AM",
+            "amOut": "11:13:23 AM"
+          }
+        },
+        {
+          "studentId": "e15c6bd2-7c95-4201-8fe6-2ab42c029b91",
+          "name": "justine clark lampa",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:11:42 AM",
+            "amOut": "11:17:32 AM",
+            "pmIn": "5:08:56 PM"
+          }
+        },
+        {
+          "studentId": "781e8423-460e-4597-ad63-9c1ebf0835e6",
+          "name": "andrenix tizon",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:06:56 AM",
+            "amOut": "11:11:57 AM",
+            "pmIn": "5:08:25 PM"
+          }
+        },
+        {
+          "studentId": "42b81e4a-2f22-484d-82a5-05231a207f4d",
+          "name": "allan lampayan",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:12 AM",
+            "amOut": "11:13:35 AM",
+            "pmIn": "1:02:34 PM",
+            "pmOut": "5:12:00 PM"
+          }
+        },
+        {
+          "studentId": "c3d4b748-bbc9-4b65-9d6a-841f8c969ae0",
+          "name": "jiro sargento",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:15 AM"
+          }
+        },
+        {
+          "studentId": "fc2bfa35-ea4e-4a41-8950-dcde3e53d097",
+          "name": "vincent eddieson labita",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:08:40 AM",
+            "amOut": "11:13:55 AM",
+            "pmIn": "5:08:18 PM"
+          }
+        },
+        {
+          "studentId": "a0c1e6f1-36aa-4d73-a4d0-00ab6afcd2b0",
+          "name": "ferdinand salvan",
+          "year": "G11",
+          "session": {
+            "amIn": "8:06:13 AM",
+            "amOut": "11:13:30 AM",
+            "pmIn": "5:08:38 PM"
+          }
+        },
+        {
+          "studentId": "66c7fc14-50ff-4407-8f97-2fe8f8a3d240",
+          "name": "brent peter tabamo",
+          "year": "G11",
+          "session": {
+            "amIn": "8:07:13 AM",
+            "amOut": "11:14:01 AM",
+            "pmIn": "1:17:46 PM",
+            "pmOut": "5:10:36 PM"
+          }
+        },
+        {
+          "studentId": "72e74b4b-7804-454a-a79a-4166bb57cdb3",
+          "name": "clarence jomari alde",
+          "year": "G11",
+          "session": {
+            "amIn": "8:11:00 AM"
+          }
+        },
+        {
+          "studentId": "484dbbf4-ea70-43e7-9186-52b57ff572fe",
+          "name": "king leonard redondo",
+          "year": "G11",
+          "session": {
+            "amIn": "8:06:18 AM",
+            "pmIn": "1:09:05 PM"
+          }
+        },
+        {
+          "studentId": "a3c148ee-13b0-4966-b3dd-1d283008db5a",
+          "name": "david rioken arbutante",
+          "year": "G11",
+          "session": {
+            "amIn": "8:11:45 AM",
+            "amOut": "11:15:32 AM",
+            "pmIn": "1:05:35 PM",
+            "pmOut": "5:10:32 PM"
+          }
+        },
+        {
+          "studentId": "c37b00b4-852d-41af-8b14-089f74b9ca00",
+          "name": "jing juan molo",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:11:49 AM",
+            "amOut": "11:14:06 AM",
+            "pmIn": "1:03:08 PM"
+          }
+        },
+        {
+          "studentId": "97ea2ea9-8397-449e-8648-d6a8898577fd",
+          "name": "crispsalmmer fayth pimentel",
+          "year": "G11",
+          "session": {
+            "amIn": "8:06:00 AM",
+            "amOut": "11:14:16 AM",
+            "pmIn": "1:05:58 PM",
+            "pmOut": "5:10:27 PM"
+          }
+        },
+        {
+          "studentId": "a57c16c4-d2d1-4080-a4f7-1281747bdf0f",
+          "name": "john loyd maderse",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:07:25 AM",
+            "amOut": "11:12:03 AM",
+            "pmIn": "5:08:53 PM"
+          }
+        },
+        {
+          "studentId": "9be625a9-2567-4af2-acc8-7cb5749d9f3e",
+          "name": "john kherl tamayo",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:11:58 AM",
+            "amOut": "11:12:01 AM",
+            "pmIn": "5:09:33 PM",
+            "pmOut": "5:09:58 PM"
+          }
+        },
+        {
+          "studentId": "a448b83e-f637-4d6f-b833-1e7afb9c7fd6",
+          "name": "dorn raven joting",
+          "year": "G11",
+          "session": {
+            "amIn": "8:07:20 AM",
+            "amOut": "11:13:51 AM",
+            "pmIn": "1:04:44 PM",
+            "pmOut": "5:11:22 PM"
+          }
+        },
+        {
+          "studentId": "49af9fbe-ac05-4e99-ab5a-5f87a7028f48",
+          "name": "leobert john aquino",
+          "year": "G11",
+          "session": {
+            "amIn": "8:06:44 AM",
+            "amOut": "11:14:49 AM",
+            "pmIn": "1:05:28 PM",
+            "pmOut": "5:10:36 PM"
+          }
+        },
+        {
+          "studentId": "40a86de3-f6cf-44d9-adfa-1af0e2d382ea",
+          "name": "neil andrew buenavista",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:11:30 AM",
+            "amOut": "11:14:11 AM",
+            "pmIn": "5:09:19 PM"
+          }
+        },
+        {
+          "studentId": "e4fcbb61-5ae5-46bb-99e5-c37643f68f8c",
+          "name": "amgel ugsimar",
+          "year": "G11",
+          "session": {
+            "amIn": "8:07:47 AM",
+            "amOut": "11:15:20 AM",
+            "pmIn": "1:06:03 PM",
+            "pmOut": "5:10:50 PM"
+          }
+        },
+        {
+          "studentId": "dc540dda-5acf-45de-9cf6-40f940e27f9d",
+          "name": "james trayton salinas",
+          "year": "G11",
+          "session": {
+            "amIn": "8:13:14 AM",
+            "amOut": "11:13:47 AM",
+            "pmIn": "1:16:50 PM",
+            "pmOut": "5:10:54 PM"
+          }
+        },
+        {
+          "studentId": "70c08560-c92f-4eff-8cd8-0eed07669114",
+          "name": "joanne alexandra belderol",
+          "year": "G12",
+          "session": {
+            "amIn": "8:14:44 AM",
+            "amOut": "11:13:32 AM",
+            "pmIn": "5:09:11 PM"
+          }
+        },
+        {
+          "studentId": "c57db5a2-585c-447e-a87a-1c0eed759ddb",
+          "name": "eltresha marie vilvestre",
+          "year": "G12",
+          "session": {
+            "amIn": "8:14:22 AM",
+            "amOut": "11:15:29 AM",
+            "pmIn": "5:09:07 PM"
+          }
+        },
+        {
+          "studentId": "9dfbb6a0-fac5-478f-a16a-5889274a39a7",
+          "name": "sofia margaret sawalan",
+          "year": "G12",
+          "session": {
+            "amIn": "8:14:19 AM",
+            "amOut": "11:16:02 AM",
+            "pmIn": "5:08:59 PM"
+          }
+        },
+        {
+          "studentId": "15e26bab-989a-42ec-8146-0e5bc021808d",
+          "name": "johncliffrwyn dela peña",
+          "year": "G11",
+          "session": {
+            "amIn": "8:15:43 AM"
+          }
+        },
+        {
+          "studentId": "40316b80-8438-4352-b7ee-07b708bbe523",
+          "name": "christian sumintan",
+          "year": "G12",
+          "session": {
+            "amIn": "8:16:31 AM",
+            "amOut": "11:20:40 AM",
+            "pmIn": "1:00:26 PM",
+            "pmOut": "5:19:27 PM"
+          }
+        },
+        {
+          "studentId": "81480e63-2846-4ad9-988d-077789f9ed0a",
+          "name": "journey ace mac",
+          "year": "2Y",
+          "session": {
+            "amIn": "11:12:34 AM",
+            "pmIn": "1:35:49 PM",
+            "pmOut": "5:11:41 PM"
+          }
+        },
+        {
+          "studentId": "018c1a68-0ba1-408d-b209-b530d5eba9c8",
+          "name": "vic ulrich tinggoy",
+          "year": "G11",
+          "session": {
+            "amIn": "8:05:38 AM",
+            "pmIn": "5:09:15 PM",
+            "pmOut": "5:10:19 PM"
+          }
+        },
+        {
+          "studentId": "c7441eca-50c1-43f9-8cc7-38ac4ce70097",
+          "name": "paul jedrick bag-ao",
+          "year": "G11",
+          "session": {
+            "amIn": "8:19:17 AM",
+            "amOut": "11:20:55 AM",
+            "pmIn": "1:21:16 PM"
+          }
+        },
+        {
+          "studentId": "70a6fec6-3b93-4e27-887a-a8c64e0daf39",
+          "name": "angel mae dela cruz",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:20:16 AM",
+            "amOut": "11:24:22 AM",
+            "pmIn": "5:08:28 PM"
+          }
+        },
+        {
+          "studentId": "a011c12a-730c-41f8-b480-e5370d8a8396",
+          "name": "john blaire indino",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:31 AM",
+            "pmIn": "1:06:17 PM",
+            "pmOut": "5:10:12 PM"
+          }
+        },
+        {
+          "studentId": "48add921-8292-45e6-8745-c68d39af5590",
+          "name": "rafael flores",
+          "year": "G11",
+          "session": {
+            "amIn": "8:06:15 AM",
+            "amOut": "11:13:28 AM",
+            "pmIn": "5:07:52 PM"
+          }
+        },
+        {
+          "studentId": "ecb3110b-1643-4541-9609-329796cb8463",
+          "name": "merylle angeline lumanog",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:21:44 AM",
+            "amOut": "11:21:48 AM"
+          }
+        },
+        {
+          "studentId": "a013c3d4-9599-4898-9db3-97ddc97bc038",
+          "name": "janna marie amedina",
+          "year": "4Y",
+          "session": {
+            "amIn": "8:07:56 AM",
+            "amOut": "11:16:10 AM",
+            "pmIn": "1:07:16 PM"
+          }
+        },
+        {
+          "studentId": "2ba8c63c-0344-4bb8-98c5-5a65b8fc5d61",
+          "name": "ged patrick diayon",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:08:32 AM",
+            "amOut": "11:20:25 AM",
+            "pmIn": "1:00:14 PM",
+            "pmOut": "5:13:26 PM"
+          }
+        },
+        {
+          "studentId": "a46a8740-e8ae-4d22-a8c0-3bb52cf7aa54",
+          "name": "jymer genesis bacus",
+          "year": "4Y",
+          "session": {
+            "amIn": "8:23:05 AM",
+            "amOut": "11:16:26 AM",
+            "pmIn": "1:07:09 PM"
+          }
+        },
+        {
+          "studentId": "140efc9b-a1eb-437c-bff8-f337f5b8a983",
+          "name": "jan dilbert unabia",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:27 AM",
+            "pmIn": "1:03:49 PM"
+          }
+        },
+        {
+          "studentId": "dbc1b2d7-ea67-4dae-8e7b-a7a21d7e04f9",
+          "name": "rhaj ahmade emborgo",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:51 AM",
+            "amOut": "11:14:19 AM",
+            "pmIn": "5:09:03 PM"
+          }
+        },
+        {
+          "studentId": "8342fa74-2974-4510-a01e-4c4f41718415",
+          "name": "benhur daday",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:45 AM",
+            "amOut": "11:12:07 AM",
+            "pmIn": "1:06:10 PM",
+            "pmOut": "5:10:04 PM"
+          }
+        },
+        {
+          "studentId": "c20f5ec9-56a9-498a-9258-dddc9df8d0c9",
+          "name": "jennelyn cabanizas",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:24:55 AM",
+            "amOut": "11:21:53 AM",
+            "pmIn": "1:36:00 PM"
+          }
+        },
+        {
+          "studentId": "4b31908f-cd00-46e1-8a4b-fe5d9270e7de",
+          "name": "xymone emmanuel gengone",
+          "year": "G12",
+          "session": {
+            "amIn": "8:28:20 AM",
+            "amOut": "11:21:06 AM",
+            "pmIn": "1:00:47 PM",
+            "pmOut": "5:19:38 PM"
+          }
+        },
+        {
+          "studentId": "c637f7b6-e3fb-4485-8cac-9fe0b9dea141",
+          "name": "lemer anduyan",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:28:34 AM",
+            "amOut": "11:14:32 AM",
+            "pmIn": "1:04:04 PM",
+            "pmOut": "5:19:03 PM"
+          }
+        },
+        {
+          "studentId": "88ba6ea1-2a5f-444a-a02d-4c35b8b573d7",
+          "name": "kim zyrell romano",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:28:41 AM",
+            "amOut": "11:19:35 AM",
+            "pmIn": "12:59:49 PM",
+            "pmOut": "5:15:43 PM"
+          }
+        },
+        {
+          "studentId": "e7a30ec6-17bc-4c62-b854-cb571a806b7f",
+          "name": "reynan flores",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:30:39 AM",
+            "amOut": "11:11:07 AM",
+            "pmIn": "12:59:21 PM",
+            "pmOut": "5:20:32 PM"
+          }
+        },
+        {
+          "studentId": "36c0f181-dfc4-48e5-9852-c888d9c9f56b",
+          "name": "john dave alexee redoña",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:31:02 AM",
+            "amOut": "11:11:21 AM",
+            "pmIn": "1:26:03 PM",
+            "pmOut": "5:11:14 PM"
+          }
+        },
+        {
+          "studentId": "bef65446-3470-4f42-9d4d-46fdae401826",
+          "name": "joseph, jr. dangli",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:32:19 AM",
+            "amOut": "11:15:15 AM",
+            "pmIn": "1:02:42 PM",
+            "pmOut": "5:09:56 PM"
+          }
+        },
+        {
+          "studentId": "1ad83d44-00be-447e-b821-938c5491823f",
+          "name": "kurt genriv sabellina",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:33:16 AM",
+            "amOut": "11:11:35 AM",
+            "pmIn": "1:02:09 PM"
+          }
+        },
+        {
+          "studentId": "a6f7b952-a18e-456b-9e28-8a07c06618ce",
+          "name": "marc genesis equipelas",
+          "year": "G11",
+          "session": {
+            "amIn": "8:36:08 AM",
+            "pmIn": "5:09:29 PM"
+          }
+        },
+        {
+          "studentId": "0fa6cbef-b58b-4830-bd7a-595a186b6b73",
+          "name": "kathy joy rayos",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:37:07 AM",
+            "amOut": "11:12:12 AM",
+            "pmIn": "5:08:45 PM"
+          }
+        },
+        {
+          "studentId": "c8ea234f-7074-4ab7-8556-2454cfd89e76",
+          "name": "charles benedict gamil",
+          "year": "G11",
+          "session": {
+            "amIn": "8:37:24 AM"
+          }
+        },
+        {
+          "studentId": "f69cd3d1-1f85-4a71-bfbf-97babb8c6b16",
+          "name": "mohammad sayed abdul saleem",
+          "year": "G11",
+          "session": {
+            "amIn": "8:40:47 AM"
+          }
+        },
+        {
+          "studentId": "e180e0ea-d49c-478a-9857-1bc04895e703",
+          "name": "peter yap",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:41:22 AM",
+            "amOut": "11:11:31 AM",
+            "pmIn": "1:02:03 PM",
+            "pmOut": "5:10:05 PM"
+          }
+        },
+        {
+          "studentId": "5f9effe8-8fbc-474d-9cd6-698882a738d0",
+          "name": "keifer khane cabanlit",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:44:54 AM",
+            "amOut": "11:11:24 AM",
+            "pmIn": "1:03:52 PM",
+            "pmOut": "5:11:20 PM"
+          }
+        },
+        {
+          "studentId": "c641b4bc-d1c7-4841-ae2e-07a7e1437151",
+          "name": "maria shiela reena martel",
+          "year": "2Y",
+          "session": {
+            "amIn": "8:46:35 AM",
+            "amOut": "11:17:39 AM",
+            "pmOut": "5:12:55 PM"
+          }
+        },
+        {
+          "studentId": "1580d1fa-c5bb-4ada-8b55-12bdf022ab03",
+          "name": "ryan clint arquita",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:47:13 AM",
+            "amOut": "11:09:04 AM",
+            "pmIn": "5:07:45 PM"
+          }
+        },
+        {
+          "studentId": "ba403b50-c448-48c1-88e0-7e57dc5a3cd0",
+          "name": "christian paul quilas",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:54:43 AM",
+            "amOut": "11:19:29 AM",
+            "pmIn": "12:59:41 PM",
+            "pmOut": "5:20:04 PM"
+          }
+        },
+        {
+          "studentId": "00730478-85ad-4360-bb20-d4d7db9a7dba",
+          "name": "shiela mae gallogo",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:55:54 AM",
+            "amOut": "11:19:10 AM",
+            "pmIn": "12:59:39 PM",
+            "pmOut": "5:15:52 PM"
+          }
+        },
+        {
+          "studentId": "b64643fd-66a4-448d-a783-63a9ab76b126",
+          "name": "ian vergel musa",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:56:06 AM",
+            "amOut": "11:15:25 AM",
+            "pmIn": "1:03:31 PM",
+            "pmOut": "5:11:32 PM"
+          }
+        },
+        {
+          "studentId": "e28f8ac5-1a03-4d13-a723-d1ec62721785",
+          "name": "remelyn parinasan",
+          "year": "3Y",
+          "session": {
+            "amIn": "8:10:34 AM",
+            "amOut": "11:19:56 AM",
+            "pmIn": "1:00:42 PM",
+            "pmOut": "5:15:37 PM"
+          }
+        },
+        {
+          "studentId": "c11fa048-6d59-4ead-b0f5-16da920a8117",
+          "name": "kient walter englatera",
+          "year": "G12",
+          "session": {
+            "amIn": "8:58:20 AM",
+            "pmIn": "1:12:08 PM",
+            "pmOut": "5:11:10 PM"
+          }
+        },
+        {
+          "studentId": "6c4ffa22-3994-44cb-a10f-b90b91eddb82",
+          "name": "rj karl oronan",
+          "year": "G11",
+          "session": {
+            "amIn": "8:59:22 AM"
+          }
+        },
+        {
+          "studentId": "8cc1df04-e910-49da-a6c7-7f296f633d1a",
+          "name": "kester lewis galpo",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:10:47 AM",
+            "amOut": "11:14:37 AM",
+            "pmIn": "5:07:56 PM"
+          }
+        },
+        {
+          "studentId": "1fc2c728-d9a6-4ead-b481-c636ca59f6c1",
+          "name": "kurt earl alberto",
+          "year": "2Y",
+          "session": {
+            "amIn": "11:12:29 AM",
+            "pmIn": "1:14:43 PM"
+          }
+        },
+        {
+          "studentId": "f1595189-81da-40e3-9558-da09c8f4b6e5",
+          "name": "jessie baiño",
+          "year": "4Y",
+          "session": {
+            "amIn": "9:22:08 AM",
+            "pmOut": "5:11:48 PM"
+          }
+        },
+        {
+          "studentId": "7fda5208-9cb7-46d1-b5a8-aafa29e10c93",
+          "name": "steven roy ebarle",
+          "year": "G12",
+          "session": {
+            "amIn": "9:22:57 AM",
+            "pmIn": "5:09:23 PM"
+          }
+        },
+        {
+          "studentId": "cd09351e-7ec5-4c6b-8484-7aacdb8956ba",
+          "name": "vincent paul orong",
+          "year": "4Y",
+          "session": {
+            "amIn": "9:35:30 AM",
+            "amOut": "11:16:54 AM",
+            "pmIn": "1:04:15 PM",
+            "pmOut": "5:12:51 PM"
+          }
+        },
+        {
+          "studentId": "f3782ce2-aeeb-42ca-88c4-dfb77f5089fb",
+          "name": "doven lee gantuangco",
+          "year": "1Y",
+          "session": {
+            "amIn": "8:11:13 AM",
+            "amOut": "11:17:17 AM"
+          }
+        },
+        {
+          "studentId": "ce11730d-525d-49d8-bdb9-6d5fc2bf0a26",
+          "name": "mark daryl dacutanan",
+          "year": "2Y",
+          "session": {
+            "amOut": "11:13:41 AM",
+            "pmIn": "1:09:20 PM",
+            "pmOut": "5:11:51 PM"
+          }
+        },
+        {
+          "studentId": "626ceedf-c2f0-4161-9f94-e3cc46d60d03",
+          "name": "gabrielle seguisabal",
+          "year": "1Y",
+          "session": {
+            "amOut": "11:14:54 AM",
+            "pmIn": "1:02:26 PM",
+            "pmOut": "5:10:46 PM"
+          }
+        },
+        {
+          "studentId": "5eb903ac-6a1c-4fde-8f1f-82fc492447f0",
+          "name": "shawn khey murillo",
+          "year": "G12",
+          "session": {
+            "amOut": "11:15:40 AM",
+            "pmIn": "5:09:27 PM"
+          }
+        },
+        {
+          "studentId": "c00ad3a8-6465-488d-b19e-f0342569b244",
+          "name": "john clyde ferriols",
+          "year": "4Y",
+          "session": {
+            "amOut": "11:16:39 AM",
+            "pmIn": "1:07:04 PM",
+            "pmOut": "5:10:41 PM"
+          }
+        },
+        {
+          "studentId": "e8a95495-0ed2-4e5c-aaf4-377b5b6a89cf",
+          "name": "marben tomarompong",
+          "year": "4Y",
+          "session": {
+            "amOut": "11:16:42 AM",
+            "pmIn": "1:06:30 PM",
+            "pmOut": "5:11:54 PM"
+          }
+        },
+        {
+          "studentId": "f8470acf-9cb9-43ff-b6b8-f99ac1cfff83",
+          "name": "khent ervie gandalla",
+          "year": "4Y",
+          "session": {
+            "amOut": "11:17:57 AM",
+            "pmIn": "1:04:19 PM",
+            "pmOut": "5:11:48 PM"
+          }
+        },
+        {
+          "studentId": "a85f338e-06cb-4568-950f-f2b0ac87b6a4",
+          "name": "ivanah dela torre",
+          "year": "2Y",
+          "session": {
+            "amOut": "11:23:12 AM"
+          }
+        },
+        {
+          "studentId": "8a6efafb-6179-48d7-894d-c690524d5354",
+          "name": "khezia fernandez",
+          "year": "1Y",
+          "session": {
+            "amOut": "11:24:15 AM",
+            "pmIn": "1:20:16 PM",
+            "pmOut": "5:10:11 PM"
+          }
+        },
+        {
+          "studentId": "0ed565fb-129d-4572-aa6a-23e7a893e71b",
+          "name": "carmelo porras",
+          "year": "2Y",
+          "session": {
+            "amOut": "11:25:59 AM",
+            "pmIn": "1:01:01 PM",
+            "pmOut": "5:20:52 PM"
+          }
+        },
+        {
+          "studentId": "9f7e9727-4088-47db-a5fd-97925e8f04a3",
+          "name": "lloyd rhey rubin",
+          "year": "3Y",
+          "session": {
+            "pmIn": "1:00:52 PM",
+            "pmOut": "5:11:02 PM",
+            "amIn": "8:11:34 AM"
+          }
+        },
+        {
+          "studentId": "1f8f456d-ecb5-4a89-8775-0d3b8965f6d1",
+          "name": "dan mark carejo",
+          "year": "1Y",
+          "session": {
+            "pmIn": "5:08:35 PM"
+          }
+        },
+        {
+          "studentId": "530689b4-560e-4dfc-a9cc-d6a3b0e694ef",
+          "name": "jethro galinato",
+          "year": "2Y",
+          "session": {
+            "pmIn": "1:04:31 PM",
+            "pmOut": "5:12:59 PM"
+          }
+        },
+        {
+          "studentId": "3eefe530-c112-4da7-92ea-c0c8e4379665",
+          "name": "zeth terence egama",
+          "year": "G11",
+          "session": {
+            "pmIn": "5:07:54 PM",
+            "amIn": "8:06:40 AM"
+          }
+        },
+        {
+          "studentId": "1ab0a67b-15ef-45a6-a01c-3edff6e1a68a",
+          "name": "kent umpara",
+          "year": "G12",
+          "session": {
+            "pmIn": "1:12:02 PM",
+            "pmOut": "5:11:24 PM"
+          }
+        },
+        {
+          "studentId": "061b9b55-f715-428b-aefa-0f27a994166d",
+          "name": "von lorenz gonzaga",
+          "year": "G12",
+          "session": {
+            "pmIn": "1:12:14 PM",
+            "pmOut": "5:10:57 PM"
+          }
+        },
+        {
+          "studentId": "5a89a9ce-9f0e-43d2-84c5-82d77dd3ed2f",
+          "name": "jieran mar lladers",
+          "year": "1Y",
+          "session": {
+            "pmIn": "1:15:02 PM",
+            "pmOut": "5:10:17 PM"
+          }
+        },
+        {
+          "studentId": "ff644943-dc6c-4d58-b106-e62999c0cb8e",
+          "name": "josiah james vestidas",
+          "year": "3Y",
+          "session": {
+            "pmIn": "1:15:26 PM",
+            "pmOut": "5:10:58 PM",
+            "amIn": "8:06:48 AM"
+          }
+        },
+        {
+          "studentId": "24270cd2-1261-4d89-a947-1e27e00e0ecb",
+          "name": "ahron dave duna",
+          "year": "G12 -",
+          "session": {
+            "pmIn": "1:19:47 PM",
+            "pmOut": "5:14:19 PM"
+          }
+        },
+        {
+          "studentId": "ec7d93f9-4d4c-4a17-87ad-749ac0e845af",
+          "name": "reymark balingit",
+          "year": "3Y",
+          "session": {
+            "pmIn": "1:21:46 PM",
+            "pmOut": "5:20:23 PM"
+          }
+        },
+        {
+          "studentId": "5ddf26bb-f6eb-44dd-bf72-eae01dac2d33",
+          "name": "zaldy christian digal",
+          "year": "2Y",
+          "session": {
+            "pmIn": "4:19:55 PM"
+          }
+        },
+        {
+          "studentId": "cce19b7f-517e-4f61-9a4e-dcbf13f1e2e9",
+          "name": "clemteod lee cariloria",
+          "year": "3Y",
+          "session": {
+            "pmIn": "5:07:47 PM"
+          }
+        },
+        {
+          "studentId": "18224c45-d370-47e4-9d4b-93f2583e72e3",
+          "name": "jericho zapanta",
+          "year": "2Y",
+          "session": {
+            "pmOut": "5:10:54 PM",
+            "amIn": "8:15:39 AM"
+          }
+        }
+      ]
+    }
+  }

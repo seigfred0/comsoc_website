@@ -1,17 +1,19 @@
-
-
 export const TabulationPage = {
     template: `
-        <h1>Hiiii</h1>
+        <div>
+            
+            
+        </div>
     `,
     data() {
         return {
-        
-        }
+            
+        };
     },
     methods: {
-
-
+        // Optional: You could add methods here for other logic if needed
+    },
+    filters: {
+       
     }
-}
-
+};

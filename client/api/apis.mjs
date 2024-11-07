@@ -1,7 +1,6 @@
 
 // const url = "http://172.20.10.3:5000"
 // const url = "https://ac59-131-226-115-61.ngrok-free.app"
-
 // const url = "http://localhost:5000"
 const url = "http://comsocmalaybalay.online:5000"
 
